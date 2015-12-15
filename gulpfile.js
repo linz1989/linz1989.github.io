@@ -64,9 +64,9 @@ gulp.task('connect', function() {
 
 //监控改变
 gulp.task('watch', function () {
-    gulp.watch(raw_css + '/**/*.scss', ['prod']);
-    gulp.watch(raw_js + '/**/*.js', ['prod']);
-    //gulp.watch(raw_html + '/*.html', ['prod']);
+    gulp.watch(raw_css + '/**/*.scss', ['sass']);
+    gulp.watch(raw_js + '/**/*.js', ['minjs']);
+    gulp.watch(raw_html + '/*.html', ['rev']);
 });
 
 //顺序执行任务
