@@ -6,20 +6,21 @@ document.ready(function(){
             res = JSON.parse(res);
             var timeLine = document.getElementById("time-line");
             var html = "";
-            for(var i=0;i<res.data.length;i++){
+            res = res["data"];
+            for(var i=0;i<res.length;i++){
                 html +="<li>\
-                                    <time datetime='2015-12-13 10:01'>\
-                                        <span>2015/12/13</span>\
-                                        <span>10:01</span>\
+                                    <time datetime='"+res[i]["publishTime"]+"'>\
+                                        <span>"+res[i]["publishTime"].split(" ")[0].replace(/-/g,"/")+"</span>\
+                                        <span>"+res[i]["publishTime"].split(" ")[1]+"</span>\
                                     </time>\
                                     <div class='circle'></div>\
                                     <div class='content'>\
-                                        <h3>Ricebean black-eyed pea</h3>\
-                                        <div></div>\
+                                        <a href='"+res[i]["link"]+"'>"+res[i]["title"]+"</a>\
+                                        <div>"+res[i]["abstract"]+"</div>\
                                     </div>\
                                 </li>";
-
             }
+            timeLine.innerHTML = html;
         }
     });
 });

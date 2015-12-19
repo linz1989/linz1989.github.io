@@ -65,6 +65,11 @@ body{
           &.active{
             background-color: rgba(39,93,161,0.6);
           }
+          &>a{
+            display: inline-block;
+            color:#fff;
+            width:100%;
+          }
         }
       }
     }

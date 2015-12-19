@@ -1,4 +1,5 @@
-
+//********************************************************************
+//tool
 //********************************************************************document ready
 (function () {
     var ie = !!(window.attachEvent && !window.opera);
@@ -64,4 +65,20 @@ var Ajax = function(set){
     ajaxObj.open(set.type,set.url,set.async);
     ajaxObj.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
     ajaxObj.send(set.data);
-}
+};
+//****************************************************************************getPageParam
+var getPageParam=function(){
+    var pos = location.href.lastIndexOf("?");
+    if(pos<=0) return null;
+    var str = location.href.substring(pos+1),
+        arr = str.split("&"),
+        tempArr,
+        paramObj = {};
+    for(var i=0;i<arr.length;i++){
+        tempArr = arr[i].split("=");
+        if(tempArr.length==2){
+            paramObj[tempArr[0]] = tempArr[1];
+        }
+    }
+    return paramObj;
+};

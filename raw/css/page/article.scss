@@ -1,0 +1,29 @@
+@import "../common/base.scss";
+
+section#main-content{
+  &>h2.title{
+    margin-top:10px;
+    line-height: 70px;
+    color:#4d4d4d;
+    font-size:30px;
+    text-align: center;
+  }
+  &>h3.tip{
+    color:#6d6d6d;
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+    margin:0 20px 10px;
+    font-size:14px;
+    line-height: 30px;
+  }
+  &>div.content{
+    padding : 0 20px 10px;
+    font-size:18px;
+    color:#6d6d6d;
+    line-height: 36px;
+    &>p{
+      text-indent: 36px;
+      margin-bottom:10px;
+    }
+  }
+}
