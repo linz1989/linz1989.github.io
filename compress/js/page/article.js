@@ -1,1 +1,1 @@
-document.ready(function(){getPageParam()});
+document.ready(function(){var e=getPageParam();e&&e.id||(location.href="404.html"),ajax({url:"data/article/"+e.id+".json",type:"get",success:function(e){e=JSON.parse(e),document.querySelector("#main-content>h2.title").innerHTML=e.title,document.querySelector("#main-content>h3.tip").innerHTML=e.publishTime}}),ajax({url:"data/article/"+e.id+".html",type:"get",success:function(e){document.querySelector("#main-content>div.content").innerHTML=e}})});

@@ -1,5 +1,5 @@
 document.ready(function(){
-    Ajax({
+    ajax({
         url : "data/home.json",
         type : "get",
         success : function(res){
@@ -10,7 +10,7 @@ document.ready(function(){
             for(var i=0;i<res.length;i++){
                 html +="<li>\
                                     <time datetime='"+res[i]["publishTime"]+"'>\
-                                        <span>"+res[i]["publishTime"].split(" ")[0].replace(/-/g,"/")+"</span>\
+                                        <span>"+res[i]["publishTime"].split(" ")[0]+"</span>\
                                         <span>"+res[i]["publishTime"].split(" ")[1]+"</span>\
                                     </time>\
                                     <div class='circle'></div>\

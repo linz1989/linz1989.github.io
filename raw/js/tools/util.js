@@ -24,8 +24,8 @@
     };
 })();
 
-//*************************************************************************Ajax
-var Ajax = function(set){
+//*************************************************************************ajax
+var ajax = function(set){
     set.type=set.type=="get"?"get":"post";
     set.async=set.async!=false;
     if(typeof set.data==="object") {

@@ -38,6 +38,13 @@ body{
       line-height: 160px;
       margin:0 auto;
       font-size:55px;
+      position: relative;
+      &>img{
+        position: absolute;
+        right:10px;
+        top:50%;
+        margin-top:-103px;
+      }
     }
     &>nav{
       position: absolute;

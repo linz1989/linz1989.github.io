@@ -1,0 +1,25 @@
+<p>这两个插件默认是在资源文件名加md5后缀：</p>
+<img src="images/articleImgs/2/1.png"/>
+<p>预期的效果应该是版本号参数格式：</p>
+<img src="images/articleImgs/2/2.png" style="margin-bottom:20px;">
+<p><strong>作如下修改：</strong></p>
+<ul class="txt-img">
+    <li>
+        <h3><i class="circle"></i>npm install gulp-rev gulp-rev-collector（或者使用<a href="http://npm.taobao.org/">cnpm</a>）</h3>
+    </li>
+    <li>
+        <h3><i class="circle"></i>打开node_modules\gulp-rev\index.js</h3>
+        <h3>第143行manifest[originalFile] = revisionedFile; 改为 manifest[originalFile] = originalFile + '?v=' + file.revHash;</h3>
+        <img src="images/articleImgs/2/3.png"/>
+    </li>
+    <li>
+        <h3><i class="circle"></i>打开node_modules\gulp-rev\node_modules\rev-path\index.js</h3>
+        <h3>第10行return filename + '-' + hash + ext; 修改为 return filename + ext;</h3>
+        <img src="images/articleImgs/2/4.png"/>
+    </li>
+    <li>
+        <h3><i class="circle"></i>打开node_modules\gulp-rev-collector\index.js</h3>
+        <h3>第31行 if ( path.basename(json[key]).replace(new RegExp( opts.revSuffix ), '' ) !==  path.basename(key) ) 修改为if ( path.basename(json[key]).split('?')[0] !== path.basename(key) )</h3>
+        <img src="images/articleImgs/2/5.png"/>
+    </li>
+</ul>
