@@ -134,3 +134,37 @@ div.content-wrapper{
     }
   }
 }
+
+@media screen and (min-width:1600px){
+  body>header{
+    &>h1{
+      width:1500px;
+    }
+    &>nav>ul{
+      width:1520px;
+    }
+  }
+
+  div.content-wrapper {
+    & > section#main-content {
+      width:1500px;
+    }
+  }
+}
+
+@media screen and (min-width:1920px){
+  body>header{
+    &>h1{
+      width:1810px;
+    }
+    &>nav>ul{
+      width:1830px;
+    }
+  }
+
+  div.content-wrapper {
+    & > section#main-content {
+      width:1810px;
+    }
+  }
+}
