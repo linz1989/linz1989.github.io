@@ -100,19 +100,37 @@ div.content-wrapper{
   }
 }
 
-@media screen and (min-width:1200px){
+/////////////////////////////////////////////////////media query
+@media screen and (min-width:1280px){
   body>header{
     &>h1{
-      width:1180px;
+      width:1230px;
     }
     &>nav>ul{
-      width:1200px;
+      width:1250px;
     }
   }
 
   div.content-wrapper {
     & > section#main-content {
-      width:1180px;
+      width:1230px;
+    }
+  }
+}
+
+@media screen and (min-width:1366px){
+  body>header{
+    &>h1{
+      width:1316px;
+    }
+    &>nav>ul{
+      width:1336px;
+    }
+  }
+
+  div.content-wrapper {
+    & > section#main-content {
+      width:1316px;
     }
   }
 }
