@@ -1,0 +1,255 @@
+html, body, div, span, h1, h2, h3, h4, button, h5, h6, p, blockquote, a, pre, cite, img, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  color: #817c7c;
+  background-color: #f0f0f0;
+  font: 16px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
+  overflow: auto;
+  -webkit-font-smoothing: antialiased; }
+
+button {
+  outline: none;
+  color: inherit; }
+
+ol, ul {
+  margin: 0;
+  padding: 0; }
+
+ol, ul, li {
+  list-style: none; }
+
+i, em {
+  font-style: normal; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+select, option {
+  font-family: inherit; }
+
+pre {
+  margin: 0; }
+
+.no-select {
+  -webkit-user-select: none;
+  user-select: none; }
+
+.clear-fix:before, .clear-fix:after {
+  content: "";
+  display: block; }
+
+.clear-fix:after {
+  clear: both; }
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0;
+  background: #F0F0F0;
+  border-radius: 6px; }
+
+.hljs, .hljs-subst {
+  color: #817c7c; }
+
+.hljs-comment {
+  color: #888888; }
+
+.hljs-keyword, .hljs-attribute, .hljs-selector-tag, .hljs-meta-keyword, .hljs-doctag, .hljs-name {
+  font-weight: bold; }
+
+.hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
+  color: #880000; }
+
+.hljs-title, .hljs-section {
+  color: #880000;
+  font-weight: bold; }
+
+.hljs-regexp, .hljs-symbol, .hljs-variable, .hljs-template-variable, .hljs-link, .hljs-selector-attr, .hljs-selector-pseudo {
+  color: #BC6060; }
+
+.hljs-literal {
+  color: #78A960; }
+
+.hljs-built_in, .hljs-bullet, .hljs-code, .hljs-addition {
+  color: #397300; }
+
+.hljs-meta {
+  color: #1f7199; }
+
+.hljs-meta-string {
+  color: #4d99bf; }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+.page {
+  width: 86%;
+  margin: 25px auto 20px;
+  background-color: #fafafa; }
+  .page > h2.title {
+    height: 88px;
+    line-height: 88px;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 32px; }
+  .page > div.content {
+    font-size: 18px;
+    padding: 15px 20px; }
+    .page > div.content p {
+      line-height: 45px;
+      text-indent: 36px; }
+      .page > div.content p em {
+        font-weight: bold; }
+      .page > div.content p strong {
+        color: #f60;
+        font-weight: normal; }
+    .page > div.content p.dot {
+      color: #f60; }
+    .page > div.content ul li {
+      list-style: disc inside;
+      line-height: 45px;
+      padding-left: 36px; }
+    .page > div.content button {
+      padding: 10px 10px;
+      background-color: #f0f0f0;
+      text-align: center;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px 0; }
+      .page > div.content button:hover {
+        background-color: #e0e0e0;
+        color: #6c6c6c; }
+    .page > div.content h3.sub-title {
+      font-weight: bold;
+      color: #f60;
+      font-size: 20px;
+      line-height: 2;
+      margin-top: 15px; }
+    .page > div.content h3.title {
+      background-color: #cfc;
+      color: #f96;
+      font-size: 26px;
+      border-radius: 6px;
+      line-height: 2.4;
+      padding-left: 18px;
+      margin-top: 20px; }
+      .page > div.content h3.title:first-child {
+        margin-top: 0; }
+  .page > ul.article-list {
+    padding: 0;
+    background-color: #f0f0f0; }
+    .page > ul.article-list > li {
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      cursor: pointer; }
+      .page > ul.article-list > li > h3 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 25px; }
+      .page > ul.article-list > li > div:nth-of-type(1) {
+        line-height: 45px;
+        font-size: 18px;
+        border-bottom: 1px dotted #ccc; }
+      .page > ul.article-list > li > div:nth-of-type(2) {
+        text-align: right;
+        line-height: 42px; }
+      .page > ul.article-list > li:hover {
+        box-shadow: #ddd 2px 3px 5px; }
+  .page > footer {
+    text-align: right;
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px solid #dbdbdb;
+    padding: 0 20px; }
+
+header {
+  position: relative;
+  height: 188px;
+  background: url("../../assets/header-bg.jpg"); }
+  header > div.wrap, header > nav > ul {
+    width: 86%;
+    margin: 0 auto; }
+  header > div.wrap {
+    height: 100%;
+    padding: 32px 10px; }
+  header div.logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    float: left;
+    -webkit-background-size: 88px 88px;
+    -moz-background-size: 88px 88px;
+    -o-background-size: 88px 88px;
+    background-size: 88px 88px;
+    background-image: url("../../assets/header.jpg");
+    background-repeat: no-repeat; }
+  header div.title {
+    width: 75%;
+    float: left;
+    margin-left: 20px; }
+    header div.title > h1 {
+      height: 50px;
+      line-height: 50px;
+      font-size: 48px;
+      color: #fff; }
+    header div.title > h2 {
+      height: 38px;
+      line-height: 38px;
+      font-style: italic;
+      font-size: 18px;
+      color: #ddd; }
+  header > nav {
+    position: absolute;
+    bottom: 0;
+    height: 55px;
+    width: 100%;
+    line-height: 55px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.08); }
+    header > nav ul li {
+      float: right; }
+      header > nav ul li a {
+        display: block;
+        padding: 0 30px;
+        color: #ddd;
+        transition: color 0.25s, background 0.5s; }
+        header > nav ul li a:hover {
+          background-color: #036;
+          color: #fff; }
+
+footer {
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  color: #817c7c; }
+  footer > a {
+    color: #817c7c; }
+    footer > a:hover {
+      color: #f60;
+      text-decoration: underline; }
