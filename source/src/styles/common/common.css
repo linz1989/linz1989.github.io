@@ -14,7 +14,7 @@ html, body {
   width: 100%;
   color: #817c7c;
   background-color: #f0f0f0;
-  font: 16px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
+  font: 20px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
   overflow: auto;
   -webkit-font-smoothing: antialiased; }
 
@@ -62,6 +62,21 @@ pre {
 .clear-fix:after {
   clear: both; }
 
+@media only screen and (min-width: 401px) {
+  html {
+    font-size: 25px !important; } }
+@media only screen and (min-width: 428px) {
+  html {
+    font-size: 26.75px !important; } }
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 30px !important; } }
+@media only screen and (min-width: 569px) {
+  html {
+    font-size: 35px !important; } }
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 40px !important; } }
 .hljs {
   display: block;
   overflow-x: auto;
@@ -107,21 +122,21 @@ pre {
   font-weight: bold; }
 
 .page {
-  width: 86%;
-  margin: 25px auto 20px;
-  background-color: #fafafa; }
+  width: 96%;
+  margin: .625rem auto .5rem;
+  background-color: #fafafa;
+  max-width: 1280px; }
   .page > h2.title {
-    height: 88px;
-    line-height: 88px;
+    line-height: 2.2rem;
     border-bottom: 1px solid #dbdbdb;
-    padding: 0 20px;
-    font-size: 32px; }
+    padding: 0 .5rem;
+    font-size: .8rem; }
   .page > div.content {
-    font-size: 18px;
-    padding: 15px 20px; }
+    font-size: .45rem;
+    padding: .375rem .5rem; }
     .page > div.content p {
-      line-height: 45px;
-      text-indent: 36px; }
+      line-height: 1.125rem;
+      text-indent: .9rem; }
       .page > div.content p em {
         font-weight: bold; }
       .page > div.content p strong {
@@ -131,58 +146,62 @@ pre {
       color: #f60; }
     .page > div.content ul li {
       list-style: disc inside;
-      line-height: 45px;
-      padding-left: 36px; }
+      line-height: 1.125rem;
+      padding-left: .9rem; }
     .page > div.content button {
-      padding: 10px 10px;
+      padding: .25rem;
       background-color: #f0f0f0;
       text-align: center;
-      border-radius: 6px;
+      border-radius: .15rem;
       cursor: pointer;
-      margin: 10px 0; }
+      margin: .25rem 0; }
       .page > div.content button:hover {
         background-color: #e0e0e0;
         color: #6c6c6c; }
     .page > div.content h3.sub-title {
       font-weight: bold;
       color: #f60;
-      font-size: 20px;
+      font-size: .5rem;
       line-height: 2;
-      margin-top: 15px; }
+      margin-top: .375rem; }
     .page > div.content h3.title {
       background-color: #cfc;
       color: #f96;
-      font-size: 26px;
-      border-radius: 6px;
+      font-size: .65rem;
+      border-radius: .15rem;
       line-height: 2.4;
-      padding-left: 18px;
-      margin-top: 20px; }
+      padding-left: .45rem;
+      margin-top: .5rem; }
       .page > div.content h3.title:first-child {
         margin-top: 0; }
   .page > ul.article-list {
     padding: 0;
     background-color: #f0f0f0; }
     .page > ul.article-list > li {
-      padding: 20px;
-      margin-bottom: 10px;
+      padding: .5rem;
+      margin-bottom: .25rem;
       background-color: #fff;
       cursor: pointer; }
       .page > ul.article-list > li > h3 {
-        height: 50px;
-        line-height: 50px;
-        font-size: 25px; }
+        height: 1.25rem;
+        line-height: 1.25rem;
+        font-size: .5rem; }
       .page > ul.article-list > li > div:nth-of-type(1) {
-        line-height: 45px;
-        font-size: 18px;
+        line-height: 1.125rem;
+        font-size: .45rem;
         border-bottom: 1px dotted #ccc; }
       .page > ul.article-list > li > div:nth-of-type(2) {
         text-align: right;
-        line-height: 42px; }
+        line-height: 1.05rem; }
       .page > ul.article-list > li:hover {
         box-shadow: #ddd 2px 3px 5px; }
   .page > footer {
     text-align: right;
-    height: 60px;
-    line-height: 60px;
+    height: 1.5rem;
+    line-height: 1.5rem;
     border-top: 1px solid #dbdbdb;
-    padding: 0 20px; }
+    padding: 0 .5rem; }
+
+@media screen and (max-width: 720px) {
+  .page {
+    width: 98%; } }

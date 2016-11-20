@@ -3,22 +3,22 @@
 @import 'highlight.scss';
 
 .page{
-  width:86%;
-  margin:25px auto 20px;
+  width:96%;
+  margin:.625rem auto .5rem;
   background-color: #fafafa;
+  max-width: 1280px;
   >h2.title{
-    height:88px;
-    line-height:88px;
+    line-height:2.2rem;
     border-bottom:1px solid #dbdbdb;
-    padding:0 20px;
-    font-size:32px;
+    padding:0 .5rem;
+    font-size:.8rem;
   }
   >div.content{
-    font-size:18px;
-    padding:15px 20px;
+    font-size:.45rem;
+    padding:.375rem .5rem;
     p{
-      line-height: 45px;
-      text-indent: 36px;
+      line-height: 1.125rem;
+      text-indent: .9rem;
       em{
         font-weight: bold;
       }
@@ -33,17 +33,17 @@
     ul{
       li{
         list-style: disc inside;
-        line-height: 45px;
-        padding-left:36px;
+        line-height: 1.125rem;
+        padding-left:.9rem;
       }
     }
     button{
-      padding:10px 10px;
+      padding:.25rem;
       background-color: #f0f0f0;
       text-align: center;
-      border-radius: 6px;
+      border-radius: .15rem;
       cursor: pointer;
-      margin:10px 0;
+      margin:.25rem 0;
       &:hover{
         background-color: #e0e0e0;
         color:#6c6c6c;
@@ -52,18 +52,18 @@
     h3.sub-title{
       font-weight: bold;
       color:#f60;
-      font-size:20px;
+      font-size: .5rem;
       line-height: 2;
-      margin-top:15px;
+      margin-top:.375rem;
     }
     h3.title{
       background-color: #cfc;
       color:#f96;
-      font-size:26px;
-      border-radius: 6px;
+      font-size:.65rem;
+      border-radius: .15rem;
       line-height: 2.4;
-      padding-left:18px;
-      margin-top:20px;
+      padding-left:.45rem;
+      margin-top:.5rem;
       &:first-child{
         margin-top:0
       }
@@ -73,23 +73,23 @@
     padding:0;
     background-color: #f0f0f0;
     >li{
-      padding:20px;
-      margin-bottom:10px;
+      padding:.5rem;
+      margin-bottom:.25rem;
       background-color: #fff;
       cursor: pointer;
       >h3{
-        height:50px;
-        line-height:50px;
-        font-size:25px;
+        height:1.25rem;
+        line-height:1.25rem;
+        font-size:.5rem;
       }
       >div:nth-of-type(1){
-        line-height: 45px;
-        font-size:18px;
+        line-height: 1.125rem;
+        font-size: .45rem;
         border-bottom:1px dotted #ccc;
       }
       >div:nth-of-type(2){
         text-align: right;
-        line-height: 42px;
+        line-height: 1.05rem;
       }
       &:hover{
         box-shadow: #ddd 2px 3px 5px;
@@ -98,9 +98,15 @@
   }
   >footer{
     text-align: right;
-    height:60px;
-    line-height: 60px;
+    height:1.5rem;
+    line-height: 1.5rem;
     border-top:1px solid #dbdbdb;
-    padding: 0 20px;
+    padding: 0 .5rem;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .page{
+    width:98%;
   }
 }
