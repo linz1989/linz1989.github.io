@@ -2,5 +2,7 @@
 
 source/node_modules/
 source/dist/
+source/.idea/
+source/.sass-cache/
 
 npm-debug.log
