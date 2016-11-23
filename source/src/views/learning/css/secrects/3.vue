@@ -9,10 +9,10 @@
   div.exp>div{
     width:310px;
     height:100px;
+    line-height: 100px;
     margin:0 auto;
-    background: #fff;
     text-align: center;
-    line-height: 60px;
+    color:#fff;
   }
   div.ellipse-1>div{
     background-color: #bc6060;
@@ -31,6 +31,27 @@
     width:200px;
     background-color: #bc6060;
     border-radius: 100% 0 0/ 100% 0 0;
+  }
+  div.paralle-1>div{
+    background-color: #58a;
+    transform: skewX(-45deg);
+  }
+  div.paralle-1>div>div{
+    transform: skewX(45deg);
+  }
+  div.paralle-2>div{
+    position: relative;
+  }
+  div.paralle-2>div::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    transform: skewX(45deg);
+    z-index: -1;
+    background-color: #58a;
   }
 </style>
 <template>
@@ -51,6 +72,20 @@
       <p>四分之一椭圆效果：<strong>border-radius: 100% 0 0 / 100% 0 0</strong></p>
       <div class="exp ellipse-4"><div></div></div>
       <h3 class="title">平行四边形</h3>
+      <p>在视觉设计中，平行四边形可以表达出一种动感。</p>
+      <p>方法一：嵌套元素抵消变形</p>
+      <div class="exp paralle-1"><div><div>平行四边形</div></div></div>
+      <pre><code>
+        div{
+          background-color: #58a;
+          transform: skewX(-45deg);
+        }
+        div>div{
+          transform: skewX(45deg);
+        }
+      </code></pre>
+      <p>方法二：伪元素方案</p>
+      <div class="exp paralle-2"><div>平行四边形</div></div>
     </div>
     <footer>2016年11月08日</footer>
   </div>
