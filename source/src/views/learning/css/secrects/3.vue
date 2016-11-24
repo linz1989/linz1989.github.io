@@ -41,6 +41,7 @@
   }
   div.paralle-2>div{
     position: relative;
+    z-index:0;
   }
   div.paralle-2>div::before{
     content: '';
@@ -49,9 +50,37 @@
     right:0;
     bottom:0;
     left:0;
-    transform: skewX(45deg);
+    transform: skewX(-45deg);
     z-index: -1;
     background-color: #58a;
+  }
+  div.diamond-1{
+    height:220px;
+    padding:35px 0;
+  }
+  div.diamond-1>div{
+    width:150px;
+    height:150px;
+    transform: rotate(45deg);
+    overflow: hidden;
+  }
+  div.diamond-1>div>img{
+    width:100%;
+    height:100%;
+    transform: rotate(-45deg) scale(1.42);
+  }
+  div.diamond-2{
+    text-align: center;
+    height:190px;
+  }
+  div.diamond-2>img{
+    width:150px;
+    height:150px;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    transition: clip-path 1s;
+  }
+  div.diamond-2>img:hover{
+    clip-path: polygon(0 0, 100% 0,100% 100%,0 100%);
   }
 </style>
 <template>
@@ -73,7 +102,7 @@
       <div class="exp ellipse-4"><div></div></div>
       <h3 class="title">平行四边形</h3>
       <p>在视觉设计中，平行四边形可以表达出一种动感。</p>
-      <p>方法一：嵌套元素抵消变形</p>
+      <p><strong>方法一：嵌套元素抵消变形</strong></p>
       <div class="exp paralle-1"><div><div>平行四边形</div></div></div>
       <pre><code>
         div{
@@ -84,8 +113,55 @@
           transform: skewX(45deg);
         }
       </code></pre>
-      <p>方法二：伪元素方案</p>
+      <p><strong>方法二：伪元素方案</strong>，伪元素设置z-index为-1，使堆叠层次在主元素之后。此种技巧还适用于其他任何变形样式。</p>
+      <pre><code>
+        div{
+          position: relative;
+          z-index:0;
+        }
+        div::before{
+          content: '';
+          position: absolute;
+          top:0;
+          right:0;
+          bottom:0;
+          left:0;
+          transform: skewX(-45deg);
+          z-index: -1;
+          background-color: #58a;
+        }
+      </code></pre>
       <div class="exp paralle-2"><div>平行四边形</div></div>
+      <h3 class="title">菱形图片</h3>
+      <p><strong>基于变形的方案：旋转并放大1.42倍。</strong>如果不放大将成八角形。</p>
+      <div class="exp diamond-1"><div><img src="../../../../assets/header.jpg"/></div></div>
+      <pre><code>
+        div{
+          width:150px;
+          height:150px;
+          transform: rotate(45deg);
+          overflow: hidden;
+        }
+        div>img{
+          width:100%;
+          height:100%;
+          transform: rotate(-45deg) scale(1.42);
+        }
+      </code></pre>
+      <p><strong>裁切路径方案。</strong>如果处理的是一张非正方形的图片，上面的方法就会有问题。<strong>clip-path</strong>允许将元素裁剪成任何形状，并支持动画。只是浏览器的支持程度有限。</p>
+      <div class="exp diamond-2"><img src="../../../../assets/header.jpg"/></div>
+      <pre><code>
+        img{
+          width:150px;
+          height:150px;
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          transition: clip-path 1s;
+        }
+        img:hover{
+          clip-path: polygon(0 0, 100% 0,100% 100%,0 100%);
+        }
+      </code></pre>
+      <h3 class="title">切角效果</h3>
     </div>
     <footer>2016年11月08日</footer>
   </div>
