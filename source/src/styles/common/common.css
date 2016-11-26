@@ -14,7 +14,7 @@ html, body {
   width: 100%;
   color: #817c7c;
   background-color: #f0f0f0;
-  font: 20px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
+  font: 16px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
   overflow: auto;
   -webkit-font-smoothing: antialiased; }
 
@@ -62,15 +62,6 @@ pre {
 .clear-fix:after {
   clear: both; }
 
-@media only screen and (min-width: 401px) {
-  html {
-    font-size: 35px !important; } }
-@media only screen and (min-width: 481px) {
-  html {
-    font-size: 38px !important; } }
-@media only screen and (min-width: 641px) {
-  html {
-    font-size: 40px !important; } }
 .hljs {
   display: block;
   overflow-x: auto;
@@ -117,20 +108,20 @@ pre {
 
 .page {
   width: 96%;
-  margin: .625rem auto .5rem;
+  margin: 20px auto 0;
   background-color: #fafafa;
   max-width: 1280px; }
   .page > h2.title {
-    line-height: 2.2rem;
+    padding: 20px 10px;
     border-bottom: 1px solid #dbdbdb;
-    padding: 0 .5rem;
-    font-size: .8rem; }
+    font-size: 32px; }
   .page > div.content {
-    font-size: .45rem;
-    padding: .375rem .5rem; }
+    font-size: 18px;
+    padding: 15px 20px; }
     .page > div.content p {
-      line-height: 1.125rem;
-      text-indent: .9rem; }
+      margin-top: 8px;
+      line-height: 2;
+      text-indent: 36px; }
       .page > div.content p em {
         font-weight: bold; }
       .page > div.content p strong {
@@ -140,63 +131,80 @@ pre {
       color: #f60; }
     .page > div.content ul li {
       list-style: disc inside;
-      line-height: 1.125rem;
-      padding-left: .9rem; }
+      line-height: 45px;
+      padding-left: 36px; }
     .page > div.content button {
-      padding: .25rem;
+      padding: 10px;
       background-color: #f0f0f0;
       text-align: center;
-      border-radius: .15rem;
+      border-radius: 6px;
       cursor: pointer;
-      margin: .25rem 0; }
+      margin: 10px 0; }
       .page > div.content button:hover {
         background-color: #e0e0e0;
         color: #6c6c6c; }
     .page > div.content h3.sub-title {
       font-weight: bold;
       color: #f60;
-      font-size: .5rem;
+      font-size: 20px;
       line-height: 2;
-      margin-top: .375rem; }
+      margin-top: 15px; }
     .page > div.content h3.title {
       background-color: #cfc;
       color: #f96;
-      font-size: .65rem;
-      border-radius: .15rem;
+      font-size: 26px;
+      border-radius: 6px;
       line-height: 2.4;
-      padding-left: .45rem;
-      margin-top: .5rem; }
+      padding-left: 18px;
+      margin-top: 20px; }
       .page > div.content h3.title:first-child {
         margin-top: 0; }
+    .page > div.content pre {
+      margin-top: 8px; }
   .page > ul.article-list {
     padding: 0;
     background-color: #f0f0f0; }
     .page > ul.article-list > li {
-      padding: .5rem;
-      margin-bottom: .25rem;
+      padding: 20px;
+      margin-bottom: 10px;
       background-color: #fff;
       cursor: pointer; }
       .page > ul.article-list > li > h3 {
-        height: 1.25rem;
-        line-height: 1.25rem;
-        font-size: .5rem; }
+        padding: 8px;
+        font-size: 20px;
+        color: #f96;
+        background-color: #cfc;
+        border-radius: 4px; }
       .page > ul.article-list > li > div:nth-of-type(1) {
-        line-height: 1.125rem;
-        font-size: .45rem;
+        font-size: 18px;
+        line-height: 2;
+        padding: 8px 0;
         border-bottom: 1px dotted #ccc; }
       .page > ul.article-list > li > div:nth-of-type(2) {
         text-align: right;
-        line-height: 1.05rem;
-        font-size: .4rem; }
+        line-height: 42px;
+        font-size: 16px; }
       .page > ul.article-list > li:hover {
         box-shadow: #ddd 2px 3px 5px; }
   .page > footer {
     text-align: right;
-    height: 1.5rem;
-    line-height: 1.5rem;
+    height: 60px;
+    line-height: 60px;
     border-top: 1px solid #dbdbdb;
-    padding: 0 .5rem; }
+    padding: 0 20px; }
 
 @media screen and (max-width: 720px) {
   .page {
     width: 98%; } }
+@media screen and (max-width: 530px) {
+  .page > ul.article-list > li {
+    padding: 15px 15px 7px; }
+  .page > div.content {
+    padding-left: 15px;
+    padding-right: 15px; } }
+@media screen and (max-width: 402px) {
+  .page > ul.article-list > li {
+    padding: 12px 12px 6px; }
+  .page > div.content {
+    padding-left: 12px;
+    padding-right: 12px; } }

@@ -14,7 +14,7 @@ html, body {
   width: 100%;
   color: #817c7c;
   background-color: #f0f0f0;
-  font: 20px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
+  font: 16px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
   overflow: auto;
   -webkit-font-smoothing: antialiased; }
 
@@ -62,15 +62,6 @@ pre {
 .clear-fix:after {
   clear: both; }
 
-@media only screen and (min-width: 401px) {
-  html {
-    font-size: 35px !important; } }
-@media only screen and (min-width: 481px) {
-  html {
-    font-size: 38px !important; } }
-@media only screen and (min-width: 641px) {
-  html {
-    font-size: 40px !important; } }
 .hljs {
   display: block;
   overflow-x: auto;
@@ -117,20 +108,20 @@ pre {
 
 .page {
   width: 96%;
-  margin: .625rem auto .5rem;
+  margin: 20px auto 0;
   background-color: #fafafa;
   max-width: 1280px; }
   .page > h2.title {
-    line-height: 2.2rem;
+    padding: 20px 10px;
     border-bottom: 1px solid #dbdbdb;
-    padding: 0 .5rem;
-    font-size: .8rem; }
+    font-size: 32px; }
   .page > div.content {
-    font-size: .45rem;
-    padding: .375rem .5rem; }
+    font-size: 18px;
+    padding: 15px 20px; }
     .page > div.content p {
-      line-height: 1.125rem;
-      text-indent: .9rem; }
+      margin-top: 8px;
+      line-height: 2;
+      text-indent: 36px; }
       .page > div.content p em {
         font-weight: bold; }
       .page > div.content p strong {
@@ -140,79 +131,278 @@ pre {
       color: #f60; }
     .page > div.content ul li {
       list-style: disc inside;
-      line-height: 1.125rem;
-      padding-left: .9rem; }
+      line-height: 45px;
+      padding-left: 36px; }
     .page > div.content button {
-      padding: .25rem;
+      padding: 10px;
       background-color: #f0f0f0;
       text-align: center;
-      border-radius: .15rem;
+      border-radius: 6px;
       cursor: pointer;
-      margin: .25rem 0; }
+      margin: 10px 0; }
       .page > div.content button:hover {
         background-color: #e0e0e0;
         color: #6c6c6c; }
     .page > div.content h3.sub-title {
       font-weight: bold;
       color: #f60;
-      font-size: .5rem;
+      font-size: 20px;
       line-height: 2;
-      margin-top: .375rem; }
+      margin-top: 15px; }
     .page > div.content h3.title {
       background-color: #cfc;
       color: #f96;
-      font-size: .65rem;
-      border-radius: .15rem;
+      font-size: 26px;
+      border-radius: 6px;
       line-height: 2.4;
-      padding-left: .45rem;
-      margin-top: .5rem; }
+      padding-left: 18px;
+      margin-top: 20px; }
       .page > div.content h3.title:first-child {
         margin-top: 0; }
+    .page > div.content pre {
+      margin-top: 8px; }
   .page > ul.article-list {
     padding: 0;
     background-color: #f0f0f0; }
     .page > ul.article-list > li {
-      padding: .5rem;
-      margin-bottom: .25rem;
+      padding: 20px;
+      margin-bottom: 10px;
       background-color: #fff;
       cursor: pointer; }
       .page > ul.article-list > li > h3 {
-        height: 1.25rem;
-        line-height: 1.25rem;
-        font-size: .5rem; }
+        padding: 8px;
+        font-size: 20px;
+        color: #f96;
+        background-color: #cfc;
+        border-radius: 4px; }
       .page > ul.article-list > li > div:nth-of-type(1) {
-        line-height: 1.125rem;
-        font-size: .45rem;
+        font-size: 18px;
+        line-height: 2;
+        padding: 8px 0;
         border-bottom: 1px dotted #ccc; }
       .page > ul.article-list > li > div:nth-of-type(2) {
         text-align: right;
-        line-height: 1.05rem;
-        font-size: .4rem; }
+        line-height: 42px;
+        font-size: 16px; }
       .page > ul.article-list > li:hover {
         box-shadow: #ddd 2px 3px 5px; }
   .page > footer {
     text-align: right;
-    height: 1.5rem;
-    line-height: 1.5rem;
+    height: 60px;
+    line-height: 60px;
     border-top: 1px solid #dbdbdb;
-    padding: 0 .5rem; }
+    padding: 0 20px; }
 
 @media screen and (max-width: 720px) {
   .page {
     width: 98%; } }
+@media screen and (max-width: 530px) {
+  .page > ul.article-list > li {
+    padding: 15px 15px 7px; }
+  .page > div.content {
+    padding-left: 15px;
+    padding-right: 15px; } }
+@media screen and (max-width: 402px) {
+  .page > ul.article-list > li {
+    padding: 12px 12px 6px; }
+  .page > div.content {
+    padding-left: 12px;
+    padding-right: 12px; } }
+div.exp {
+  height: 140px;
+  margin: 15px auto;
+  padding: 20px 0;
+  background: #eee;
+  border-radius: 6px; }
+
+div.exp > div {
+  width: 310px;
+  height: 100px;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center;
+  line-height: 60px; }
+
+div.transparent-border > div {
+  border: 20px dotted rgba(0, 0, 255, 0.1); }
+
+div.transparent-border > div.act {
+  background-clip: padding-box; }
+
+div.multiple-border-box-shadow > div {
+  background-color: white;
+  box-shadow: 0 0 0 5px #655, 0 0 0 10px deeppink, 0 2px 5px 10px rgba(0, 0, 0, 0.6); }
+
+div.multiple-border-outline > div {
+  background-color: white;
+  border: 5px solid #655;
+  outline: 5px solid deeppink; }
+
+div.bg {
+  height: 160px;
+  background: url("../../assets/exp/css-secrects/1.jpg") no-repeat bottom right #e1d5d8; }
+
+div.bg-position {
+  background-position: right 20px bottom 10px; }
+
+div.bg-origin {
+  padding: 10px 20px;
+  background-origin: content-box; }
+
+div.bg-calc {
+  background-position: calc(100% - 20px) calc(100% - 10px); }
+
+div.inner-border-radius > div {
+  background: tan;
+  border-radius: 0.8em;
+  padding: 1em;
+  box-shadow: 0 0 0 0.4em #655;
+  outline: 0.6em solid #655; }
+
+div.linear-1 > div {
+  background: linear-gradient(#fb3 50%, #58a 50%);
+  background-size: 100% 30px; }
+
+div.linear-2 > div {
+  background: linear-gradient(to right, #fb3 50%, #58a 0);
+  background-size: 30px 100%; }
+
+div.linear-3 > div {
+  background: linear-gradient(45deg, #fb3 25%, #58a 25%, #58a 50%, #fb3 50%, #fb3 75%, #58a 75%);
+  background-size: 42.426px 42.426px; }
+
+div.linear-4 > div {
+  background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 15px, #58a 30px); }
+
+div.linear-5 > div {
+  background: #58a;
+  background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 15px, transparent 15px, transparent 30px); }
+
+div.linear-6 > div {
+  background: white;
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 0), linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 0);
+  background-size: 30px 30px; }
+
+div.linear-7 > div {
+  background: #58a;
+  background-image: linear-gradient(#ccc 1px, transparent 0), linear-gradient(90deg, #ccc 1px, transparent 0);
+  background-size: 20px 20px; }
+
+div.linear-8 > div {
+  background: #58a;
+  background-image: linear-gradient(white 2px, transparent 0), linear-gradient(90deg, white 2px, transparent 0), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 0), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 0);
+  background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px; }
+
+div.linear-9 > div {
+  background: #655;
+  background-image: radial-gradient(tan 20%, transparent 0);
+  background-size: 30px 30px; }
+
+div.linear-10 > div {
+  background: #655;
+  background-image: radial-gradient(tan 20%, transparent 0), radial-gradient(tan 20%, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px; }
+
+div.linear-11 > div {
+  padding: 1em;
+  border: 1em solid transparent;
+  background: linear-gradient(white, white), repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 12.5%, transparent 25%, #58a 25%, #58a 37.5%, transparent 37.5%, transparent 50%);
+  background-size: 3em 3em;
+  background-clip: padding-box, border-box; }
+
+@keyframes ants {
+  to {
+    background-position: 100%; } }
+div.marching-ants > div {
+  padding: 1em;
+  border: 1px solid transparent;
+  background: linear-gradient(white, white), repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
+  background-clip: padding-box, border-box;
+  background-size: 0.6em 0.6em;
+  animation: ants 12s linear infinite; }
+
+div.ellipse-1 > div {
+  background-color: #bc6060;
+  border-radius: 155px / 50px; }
+
+div.ellipse-2 > div {
+  background-color: #bc6060;
+  border-radius: 50% / 100% 100% 0 0; }
+
+div.ellipse-3 > div {
+  width: 200px;
+  background-color: #bc6060;
+  border-radius: 100% 0 0 100%/ 50%; }
+
+div.ellipse-4 > div {
+  width: 200px;
+  background-color: #bc6060;
+  border-radius: 100% 0 0/ 100% 0 0; }
+
+div.paralle-1 > div {
+  background-color: #58a;
+  transform: skewX(-45deg); }
+
+div.paralle-1 > div > div {
+  transform: skewX(45deg); }
+
+div.paralle-2 > div {
+  position: relative;
+  z-index: 0; }
+
+div.paralle-2 > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: skewX(-45deg);
+  z-index: -1;
+  background-color: #58a; }
+
+div.diamond-1 {
+  height: 220px;
+  padding: 35px 0; }
+
+div.diamond-1 > div {
+  width: 150px;
+  height: 150px;
+  transform: rotate(45deg);
+  overflow: hidden; }
+
+div.diamond-1 > div > img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg) scale(1.42); }
+
+div.diamond-2 {
+  text-align: center;
+  height: 190px; }
+
+div.diamond-2 > img {
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  transition: clip-path 1s; }
+
+div.diamond-2 > img:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+
 header {
   position: relative;
-  height: 4.7rem;
+  height: 188px;
   background: url("../../assets/header-bg.jpg"); }
   header > div.wrap, header > nav > ul {
     width: 86%;
     margin: 0 auto; }
   header > div.wrap {
     height: 100%;
-    padding: .8rem .25rem; }
+    padding: 32px 10px; }
   header div.logo {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
     border: 2px solid #ddd;
     float: left;
@@ -223,32 +413,32 @@ header {
     background-image: url("../../assets/header.jpg");
     background-repeat: no-repeat; }
   header div.title {
-    width: 75%;
+    width: 265px;
     float: left;
-    margin-left: .5rem; }
+    margin-left: 20px; }
     header div.title > h1 {
-      height: 1.25rem;
-      line-height: 1.25rem;
-      font-size: 1.2rem;
+      height: 50px;
+      line-height: 50px;
+      font-size: 48px;
       color: #fff; }
     header div.title > h2 {
-      line-height: .95rem;
+      line-height: 38px;
       font-style: italic;
-      font-size: .45rem;
+      font-size: 16px;
       color: #ddd; }
   header > nav {
     position: absolute;
     bottom: 0;
-    height: 1.375rem;
+    height: 55px;
     width: 100%;
-    line-height: 1.375rem;
-    font-size: .45rem;
+    line-height: 55px;
+    font-size: 18px;
     background: rgba(0, 0, 0, 0.08); }
     header > nav ul li {
       float: right; }
       header > nav ul li a {
         display: block;
-        padding: 0 .75rem;
+        padding: 0 30px;
         color: #ddd;
         transition: color 0.25s, background 0.5s; }
         header > nav ul li a:hover {
@@ -257,7 +447,7 @@ header {
 
 footer {
   text-align: center;
-  font-size: .4rem;
+  font-size: 16px;
   line-height: 40px;
   color: #817c7c; }
   footer > a {
@@ -265,3 +455,29 @@ footer {
     footer > a:hover {
       color: #f60;
       text-decoration: underline; }
+
+@media screen and (max-width: 530px) {
+  header {
+    height: 143px; }
+    header > nav {
+      display: none; }
+    header > div.wrap {
+      width: 98%; } }
+@media screen and (max-width: 402px) {
+  header div.title {
+    margin-left: 6px;
+    width: 245px; }
+    header div.title > h2 {
+      font-size: 15px; }
+  header > div.wrap {
+    padding-left: 6px;
+    padding-right: 6px; } }
+@media screen and (max-width: 359px) {
+  header div.title {
+    margin-left: 4px;
+    width: 210px; }
+    header div.title > h2 {
+      font-size: 13px; }
+  header > div.wrap {
+    padding-left: 4px;
+    padding-right: 4px; } }

@@ -14,7 +14,7 @@ html, body {
   width: 100%;
   color: #817c7c;
   background-color: #f0f0f0;
-  font: 20px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
+  font: 16px/1.5 "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif;
   overflow: auto;
   -webkit-font-smoothing: antialiased; }
 
@@ -61,13 +61,3 @@ pre {
 
 .clear-fix:after {
   clear: both; }
-
-@media only screen and (min-width: 401px) {
-  html {
-    font-size: 35px !important; } }
-@media only screen and (min-width: 481px) {
-  html {
-    font-size: 38px !important; } }
-@media only screen and (min-width: 641px) {
-  html {
-    font-size: 40px !important; } }
