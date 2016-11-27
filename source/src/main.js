@@ -7,7 +7,13 @@ import App from './app.vue'
 
 Vue.use(VueRouter)
 
-var pageRouterList = ['css', 'about', 'learning-css-secrects-1', 'learning-css-secrects-2', 'learning-css-secrects-3']  // 页面列表
+var pageRouterList = [
+  'css',
+  'about',
+  'learning-css-secrects-1',
+  'learning-css-secrects-2',
+  'learning-css-secrects-3'
+]  // 页面列表
 var pageRouterOption = []         // 构造router
 
 function RouterOption (name) {

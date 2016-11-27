@@ -16,7 +16,7 @@ gulp.task('sass', function() {
 */
   return sass(raw_css + '/**/*.scss')
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'Android >= 4.0'],
+      browsers: ['last 2 versions', 'Android >= 4.0','Firefox >=20'],
       cascade: true, //是否美化属性值 默认：true 像这样：
       remove:true //是否去掉不必要的前缀 默认：true
     }))

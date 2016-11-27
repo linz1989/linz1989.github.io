@@ -35,7 +35,7 @@ div.multiple-border-outline > div {
 
 div.bg {
   height: 160px;
-  background: url("../../assets/exp/css-secrects/1.jpg") no-repeat bottom right #e1d5d8; }
+  background: url("../../assets/exp/css-secrects/1.png") no-repeat bottom right #e1d5d8; }
 
 div.bg-position {
   background-position: right 20px bottom 10px; }
@@ -116,11 +116,9 @@ div.linear-11 > div {
   background: linear-gradient(white, white), repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 12.5%, transparent 25%, #58a 25%, #58a 37.5%, transparent 37.5%, transparent 50%);
   background-size: 3em 3em;
   background-clip: padding-box, border-box; }
-
 @-webkit-keyframes ants {
   to {
     background-position: 100%; } }
-
 @keyframes ants {
   to {
     background-position: 100%; } }

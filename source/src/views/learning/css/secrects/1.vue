@@ -15,35 +15,32 @@
       <p><strong>标准语法应该写在最后；</strong></p>
       <p><strong>当使用渐变时，如果需要考虑兼容性，可以使用渐变色的平均值作为回退机制。</strong></p>
       <pre><code class="css">background: rgb(255, 128, 0); // 渐变色的平均值
-        background: -moz-linear-gradient(0deg, yellow, red);
-        background: -o-linear-gradient(0deg, yellow, red);
-        background: -webkit-linear-gradient(0deg, yellow, red);
-        background: linear-gradient(90deg, yellow, red); // 标准语法
-      </code></pre>
+  background: -moz-linear-gradient(0deg, yellow, red);
+  background: -o-linear-gradient(0deg, yellow, red);
+  background: -webkit-linear-gradient(0deg, yellow, red);
+  background: linear-gradient(90deg, yellow, red); // 标准语法</code></pre>
       <p>关于浏览器对样式是否支持的判断，可以使用<strong>特性检测：Modernizr或者@supports</strong></p>
       <p>以下是小段JavaScript代码，实现特性检测并给根元素添加辅助类：</p>
       <pre><code class="javascript">function testProperty (property) {
-          var root = document.documentElement
-          if (property in root.style) {
-            root.classList.add(property.toLowerCase())
-            return true
-          }
-          root.classList.add('no' + property.toLowerCase())
-          return false
-        }
-      </code></pre>
+    var root = document.documentElement
+    if (property in root.style) {
+      root.classList.add(property.toLowerCase())
+      return true
+    }
+    root.classList.add('no' + property.toLowerCase())
+    return false
+  }</code></pre>
       <button @click="testProperty('textShadow')">检测浏览器是否支持textShadow</button>
       <p>如果需要检测某个具体的属性值是否支持，则需要把它赋值给相应的属性，然后再检查浏览器是否还保存这个值：</p>
       <pre><code>function testValue (value, property) {
-          var dummy = document.createElement('p')
-          dummy.style[property] = value
+    var dummy = document.createElement('p')
+    dummy.style[property] = value
 
-          if (dummy.style[property]) {
-            return true
-          }
-          return false
-        }
-      </code></pre>
+    if (dummy.style[property]) {
+      return true
+    }
+    return false
+  }</code></pre>
       <button @click="testValue('linear-gradient(red,tan)','backgroundImage')">检测浏览器是否支持linear-gradient(red,tan)</button>
       <p class="dot">浏览器可以解析某个CSS特性并不能表示它已经正确实现了这个特性。</p>
       <p><strong>W3C并不产生标准。</strong>CSS规范由CSS工作组的成员来编写，大部分成员来自W3C会员公司。每项规范从最初启动到最终成熟，都会经过多个阶段。</p>
