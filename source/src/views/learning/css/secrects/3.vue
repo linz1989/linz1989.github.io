@@ -70,6 +70,63 @@
     clip-path: polygon(0 0, 100% 0,100% 100%,0 100%);
   }</code></pre>
       <h3 class="title">切角效果</h3>
+      <p>切角效果是一种流行的设计风格，它的常见形态是将元素的一个或者多个角切成45度的缺口。</p>
+      <p><strong>使用渐变实现一个角的切角效果：</strong></p>
+      <div class="exp cuttingAngle-1"><div></div></div>
+      <pre><code>background: #58a;
+  background: linear-gradient(-45deg, transparent 15px, #58a 15px);</code></pre>
+      <p><strong>使用两层渐变实现两个角的切角效果：（注意需要使用background-size设置每层的渐变宽度为50%，否则会相互覆盖）</strong></p>
+      <div class="exp cuttingAngle-2"><div></div></div>
+      <pre><code>background: linear-gradient(-45deg, transparent 15px, #58a 15px) top right, linear-gradient(45deg, transparent 15px, #58a 15px) top left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;</code></pre>
+      <p><strong>使用四层渐变实现四个角的切角效果：（四层渐变的区域各占四分之一）</strong></p>
+      <div class="exp cuttingAngle-3"><div></div></div>
+      <pre><code>background: #58a;
+  background: linear-gradient(-45deg, transparent 15px, #58a 15px) bottom right,
+                      linear-gradient(45deg, transparent 15px, #58a 15px) bottom left,
+                      linear-gradient(-135deg, transparent 15px, #58a 15px) top right,
+                      linear-gradient(135deg, transparent 15px, #58a 15px) top left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;</code></pre>
+      <p><strong>弧形切角：使用径向渐变实现内凹圆角效果</strong></p>
+      <div class="exp cuttingAngle-4"><div></div></div>
+      <pre><code>background: #58a;
+  background: radial-gradient(circle at top left, transparent 15px,#58a 15px) top left,
+                      radial-gradient(circle at bottom left, transparent 15px,#58a 15px) bottom left,
+                      radial-gradient(circle at top right, transparent 15px,#58a 15px) top right,
+                      radial-gradient(circle at bottom right, transparent 15px,#58a 15px) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;</code></pre>
+      <p><strong>使用内联SVG与border-image实现切角效果：</strong>border宽度设置为20px，大约是使用渐变实现效果时15px的1.414倍。</p>
+      <div class="exp cuttingAngle-5"><div></div></div>
+      <pre><code>border:20px solid #58a;
+  border-image: 1 url("data:image/svg+xml,
+                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='3' height='3' fill='%2358a'&gt;
+                         &lt;polygon points='0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2'/&gt;&lt;/svg&gt;");
+  background: #58a;
+  background-clip: padding-box;</code></pre>
+      <p><strong>使用clip-path实现切角效果（适应于元素背景是图片的情况下）：</strong></p>
+      <div class="exp cuttingAngle-6"><img src="../../../../assets/header.jpg"/></div>
+      <pre><code>clip-path: polygon(20px 0,calc(100% - 20px) 0,100% 20px,100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px, 20px 0);</code></pre>
+      <h3 class="title">梯形标签页</h3>
+      <p>使用3D旋转+伪元素模拟出梯形效果：（对元素使用了3D变形之后，其内部的变形效应几乎是不可逆转的）</p>
+      <div class="exp tab-1"><div></div></div>
+      <pre><code>position: relative;
+  padding: .5em 1em .35em;
+  color:white;
+  z-index:0;
+  background: transparent;
+  &:before{
+    content:"";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    z-index:-1;
+    background: #58a;
+    transform-origin: bottom;
+    transform: scaleY(2.2) perspective(.5em) rotateX(5deg);
+  }</code></pre>
+      <p>注意在Y轴上需要放大一定的倍数。</p>
     </div>
     <footer>2016年11月08日</footer>
   </div>
