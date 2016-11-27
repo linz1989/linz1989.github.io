@@ -4,7 +4,7 @@
     <div class="content">
       <h3 class="title">自适应的椭圆</h3>
       <p>border-radius可以单独指定水平和垂直半径。用斜杠分隔这两个值。</p>
-      <p>指定宽高的一半，可以得到一个精确的椭圆：border-radius: 155px / 50px;</p>
+      <p>指定宽高的一半，可以得到一个精确的椭圆：border-radius: 155px / 60px;</p>
       <div class="exp ellipse-1"><div></div></div>
       <p>border-radius还可以使用百分比值。这个百分比是基于元素的尺寸进行解析。这意味着相同的百分比会计算出不同的水平和垂直半径。</p>
       <p>要创建自适应的椭圆，使用：<strong>border-radius: 50% 50%</strong> 就可以。</p>
@@ -19,8 +19,7 @@
       <p>在视觉设计中，平行四边形可以表达出一种动感。</p>
       <p><strong>方法一：嵌套元素抵消变形</strong></p>
       <div class="exp paralle-1"><div><div>平行四边形</div></div></div>
-      <pre><code>
-        div{
+      <pre><code>div{
           background-color: #58a;
           transform: skewX(-45deg);
         }
@@ -29,10 +28,10 @@
         }
       </code></pre>
       <p><strong>方法二：伪元素方案</strong>，伪元素设置z-index为-1，使堆叠层次在主元素之后。此种技巧还适用于其他任何变形样式。</p>
-      <pre><code>
-        div{
+      <pre><code>div{
           position: relative;
           z-index:0;
+          background-color: transparent;
         }
         div::before{
           content: '';
@@ -50,8 +49,7 @@
       <h3 class="title">菱形图片</h3>
       <p><strong>基于变形的方案：旋转并放大1.42倍。</strong>如果不放大将成八角形。</p>
       <div class="exp diamond-1"><div><img src="../../../../assets/header.jpg"/></div></div>
-      <pre><code>
-        div{
+      <pre><code>div{
           width:150px;
           height:150px;
           transform: rotate(45deg);
@@ -65,8 +63,7 @@
       </code></pre>
       <p><strong>裁切路径方案。</strong>如果处理的是一张非正方形的图片，上面的方法就会有问题。<strong>clip-path</strong>允许将元素裁剪成任何形状，并支持动画。只是浏览器的支持程度有限。</p>
       <div class="exp diamond-2"><img src="../../../../assets/header.jpg"/></div>
-      <pre><code>
-        img{
+      <pre><code>img{
           width:150px;
           height:150px;
           clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);

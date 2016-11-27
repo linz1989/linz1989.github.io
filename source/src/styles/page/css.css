@@ -1,5 +1,5 @@
 div.exp {
-  height: 140px;
+  height: 160px;
   margin: 15px auto;
   padding: 20px 0;
   background: #eee;
@@ -7,11 +7,11 @@ div.exp {
 
 div.exp > div {
   width: 310px;
-  height: 100px;
+  height: 120px;
   margin: 0 auto;
   background: #fff;
   text-align: center;
-  line-height: 60px; }
+  line-height: 80px; }
 
 div.transparent-border > div {
   border: 20px dotted rgba(0, 0, 255, 0.1); }
@@ -19,7 +19,12 @@ div.transparent-border > div {
 div.transparent-border > div.act {
   background-clip: padding-box; }
 
+div.multiple-border-box-shadow {
+  padding-top: 25px; }
+
 div.multiple-border-box-shadow > div {
+  height: 105px;
+  width: 290px;
   background-color: white;
   box-shadow: 0 0 0 5px #655, 0 0 0 10px deeppink, 0 2px 5px 10px rgba(0, 0, 0, 0.6); }
 
@@ -43,53 +48,63 @@ div.bg-calc {
   background-position: calc(100% - 20px) calc(100% - 10px); }
 
 div.inner-border-radius > div {
+  width: 290px;
   background: tan;
-  border-radius: 0.8em;
-  padding: 1em;
-  box-shadow: 0 0 0 0.4em #655;
-  outline: 0.6em solid #655; }
+  border-radius: 12px;
+  box-shadow: 0 0 0 6px #655;
+  outline: 9px solid #655; }
 
 div.linear-1 > div {
+  background: -webkit-linear-gradient(#fb3 50%, #58a 50%);
   background: linear-gradient(#fb3 50%, #58a 50%);
   background-size: 100% 30px; }
 
 div.linear-2 > div {
+  background: -webkit-linear-gradient(left, #fb3 50%, #58a 0);
   background: linear-gradient(to right, #fb3 50%, #58a 0);
   background-size: 30px 100%; }
 
 div.linear-3 > div {
+  background: -webkit-linear-gradient(45deg, #fb3 25%, #58a 25%, #58a 50%, #fb3 50%, #fb3 75%, #58a 75%);
   background: linear-gradient(45deg, #fb3 25%, #58a 25%, #58a 50%, #fb3 50%, #fb3 75%, #58a 75%);
   background-size: 42.426px 42.426px; }
 
 div.linear-4 > div {
+  background: -webkit-repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 15px, #58a 30px);
   background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 15px, #58a 30px); }
 
 div.linear-5 > div {
   background: #58a;
+  background-image: -webkit-repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 15px, transparent 15px, transparent 30px);
   background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 15px, transparent 15px, transparent 30px); }
 
 div.linear-6 > div {
   background: white;
+  background-image: -webkit-linear-gradient(left, rgba(200, 0, 0, 0.5) 50%, transparent 0), -webkit-linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 0);
   background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 0), linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 0);
   background-size: 30px 30px; }
 
 div.linear-7 > div {
   background: #58a;
+  background-image: -webkit-linear-gradient(#ccc 1px, transparent 0), -webkit-linear-gradient(left, #ccc 1px, transparent 0);
   background-image: linear-gradient(#ccc 1px, transparent 0), linear-gradient(90deg, #ccc 1px, transparent 0);
   background-size: 20px 20px; }
 
 div.linear-8 > div {
   background: #58a;
+  background-image: -webkit-linear-gradient(white 2px, transparent 0), -webkit-linear-gradient(left, white 2px, transparent 0), -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 0), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.3) 1px, transparent 0);
   background-image: linear-gradient(white 2px, transparent 0), linear-gradient(90deg, white 2px, transparent 0), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 0), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px; }
 
 div.linear-9 > div {
   background: #655;
+  background-image: -webkit-radial-gradient(tan 20%, transparent 0);
   background-image: radial-gradient(tan 20%, transparent 0);
   background-size: 30px 30px; }
 
 div.linear-10 > div {
   background: #655;
+  background-image: -webkit-radial-gradient(tan 20%, transparent 0), -webkit-radial-gradient(tan 20%, transparent 0);
   background-image: radial-gradient(tan 20%, transparent 0), radial-gradient(tan 20%, transparent 0);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px; }
@@ -97,9 +112,14 @@ div.linear-10 > div {
 div.linear-11 > div {
   padding: 1em;
   border: 1em solid transparent;
+  background: -webkit-linear-gradient(white, white), -webkit-repeating-linear-gradient(135deg, red 0, red 12.5%, transparent 12.5%, transparent 25%, #58a 25%, #58a 37.5%, transparent 37.5%, transparent 50%);
   background: linear-gradient(white, white), repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 12.5%, transparent 25%, #58a 25%, #58a 37.5%, transparent 37.5%, transparent 50%);
   background-size: 3em 3em;
   background-clip: padding-box, border-box; }
+
+@-webkit-keyframes ants {
+  to {
+    background-position: 100%; } }
 
 @keyframes ants {
   to {
@@ -107,14 +127,16 @@ div.linear-11 > div {
 div.marching-ants > div {
   padding: 1em;
   border: 1px solid transparent;
+  background: -webkit-linear-gradient(white, white), -webkit-repeating-linear-gradient(135deg, black 0, black 25%, white 0, white 50%);
   background: linear-gradient(white, white), repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
   background-clip: padding-box, border-box;
   background-size: 0.6em 0.6em;
-  animation: ants 12s linear infinite; }
+  -webkit-animation: ants 12s linear infinite;
+          animation: ants 12s linear infinite; }
 
 div.ellipse-1 > div {
   background-color: #bc6060;
-  border-radius: 155px / 50px; }
+  border-radius: 155px / 60px; }
 
 div.ellipse-2 > div {
   background-color: #bc6060;
@@ -130,16 +152,29 @@ div.ellipse-4 > div {
   background-color: #bc6060;
   border-radius: 100% 0 0/ 100% 0 0; }
 
+div.paralle-1 {
+  overflow: hidden; }
+
 div.paralle-1 > div {
+  width: 260px;
   background-color: #58a;
-  transform: skewX(-45deg); }
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg); }
 
 div.paralle-1 > div > div {
-  transform: skewX(45deg); }
+  height: 100%;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
+  color: #fff;
+  line-height: 120px; }
 
 div.paralle-2 > div {
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  width: 260px;
+  background-color: transparent;
+  line-height: 120px;
+  color: #fff; }
 
 div.paralle-2 > div::before {
   content: '';
@@ -148,24 +183,27 @@ div.paralle-2 > div::before {
   right: 0;
   bottom: 0;
   left: 0;
-  transform: skewX(-45deg);
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
   z-index: -1;
   background-color: #58a; }
 
 div.diamond-1 {
-  height: 220px;
-  padding: 35px 0; }
+  height: 240px;
+  padding: 45px 0 30px; }
 
 div.diamond-1 > div {
-  width: 150px;
+  width: 150px !important;
   height: 150px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   overflow: hidden; }
 
 div.diamond-1 > div > img {
   width: 100%;
   height: 100%;
-  transform: rotate(-45deg) scale(1.42); }
+  -webkit-transform: rotate(-45deg) scale(1.42);
+          transform: rotate(-45deg) scale(1.42); }
 
 div.diamond-2 {
   text-align: center;
@@ -174,8 +212,26 @@ div.diamond-2 {
 div.diamond-2 > img {
   width: 150px;
   height: 150px;
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  transition: clip-path 1s; }
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  -webkit-transition: -webkit-clip-path 1s;
+  transition: -webkit-clip-path 1s;
+  transition: clip-path 1s;
+  transition: clip-path 1s, -webkit-clip-path 1s; }
 
 div.diamond-2 > img:hover {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+
+@media screen and (max-width: 402px) {
+  div.exp > div {
+    width: 280px; }
+
+  div.ellipse-1 > div {
+    border-radius: 140px / 60px; }
+
+  div.paralle-1 > div, div.paralle-2 > div {
+    width: 200px; } }
+@media screen and (max-width: 359px) {
+  div.paralle-1 > div, div.paralle-2 > div {
+    width: 180px; } }

@@ -5,6 +5,7 @@ header{
   position: relative;
   height: 188px;
   background: url('../../assets/header-bg.jpg');
+  transition: opacity 0.3s;
   >div.wrap,>nav>ul{
     width:86%;
     margin:0 auto;
@@ -69,6 +70,7 @@ footer{
   font-size:16px;
   line-height:40px;
   color:#817c7c;
+  transition: opacity 0.3s;
   >a{
     color:#817c7c;
     &:hover{
@@ -76,6 +78,13 @@ footer{
       text-decoration: underline;
     }
   }
+}
+
+.fade-enter-active, .fade-leave-active{
+  transition: opacity .3s ease-out, transform .3s ease-out
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 @media screen and (max-width: 530px){

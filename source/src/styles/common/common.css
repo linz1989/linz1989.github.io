@@ -53,7 +53,9 @@ pre {
 
 .no-select {
   -webkit-user-select: none;
-  user-select: none; }
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none; }
 
 .clear-fix:before, .clear-fix:after {
   content: "";
@@ -160,7 +162,10 @@ pre {
       .page > div.content h3.title:first-child {
         margin-top: 0; }
     .page > div.content pre {
-      margin-top: 8px; }
+      margin-top: 8px;
+      white-space: pre-line; }
+      .page > div.content pre > code {
+        padding: 15px 36px; }
   .page > ul.article-list {
     padding: 0;
     background-color: #f0f0f0; }
@@ -201,10 +206,22 @@ pre {
     padding: 15px 15px 7px; }
   .page > div.content {
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+    .page > div.content pre > code {
+      padding: 15px 24px; } }
 @media screen and (max-width: 402px) {
   .page > ul.article-list > li {
     padding: 12px 12px 6px; }
   .page > div.content {
-    padding-left: 12px;
-    padding-right: 12px; } }
+    padding-left: 10px;
+    padding-right: 10px; }
+    .page > div.content pre > code {
+      padding: 15px; } }
+@media screen and (max-width: 359px) {
+  .page > ul.article-list > li {
+    padding: 10px 10px 5px; }
+  .page > div.content {
+    padding-left: 6px;
+    padding-right: 6px; }
+    .page > div.content pre > code {
+      padding: 8px; } }

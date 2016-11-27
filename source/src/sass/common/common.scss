@@ -70,6 +70,10 @@
     }
     pre{
       margin-top:8px;
+      white-space: pre-line;
+      >code{
+        padding:15px 36px;
+      }
     }
   }
   >ul.article-list{
@@ -128,6 +132,11 @@
     >div.content{
       padding-left:15px;
       padding-right:15px;
+      pre{
+        >code{
+          padding:15px 24px;
+        }
+      }
     }
   }
 }
@@ -140,8 +149,32 @@
       }
     }
     >div.content{
-      padding-left:12px;
-      padding-right:12px;
+      padding-left:10px;
+      padding-right:10px;
+      pre{
+        >code{
+          padding:15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .page{
+    >ul.article-list{
+      >li{
+        padding:10px 10px 5px;
+      }
+    }
+    >div.content{
+      padding-left:6px;
+      padding-right:6px;
+      pre{
+        >code{
+          padding:8px;
+        }
+      }
     }
   }
 }

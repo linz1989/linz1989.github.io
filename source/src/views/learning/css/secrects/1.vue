@@ -14,8 +14,7 @@
       以下是首页到第一章的一些知识点。</p>
       <p><strong>标准语法应该写在最后；</strong></p>
       <p><strong>当使用渐变时，如果需要考虑兼容性，可以使用渐变色的平均值作为回退机制。</strong></p>
-      <pre><code class="css">
-        background: rgb(255, 128, 0); // 渐变色的平均值
+      <pre><code class="css">background: rgb(255, 128, 0); // 渐变色的平均值
         background: -moz-linear-gradient(0deg, yellow, red);
         background: -o-linear-gradient(0deg, yellow, red);
         background: -webkit-linear-gradient(0deg, yellow, red);
@@ -23,8 +22,7 @@
       </code></pre>
       <p>关于浏览器对样式是否支持的判断，可以使用<strong>特性检测：Modernizr或者@supports</strong></p>
       <p>以下是小段JavaScript代码，实现特性检测并给根元素添加辅助类：</p>
-      <pre><code class="javascript">
-        function testProperty (property) {
+      <pre><code class="javascript">function testProperty (property) {
           var root = document.documentElement
           if (property in root.style) {
             root.classList.add(property.toLowerCase())
@@ -36,8 +34,7 @@
       </code></pre>
       <button @click="testProperty('textShadow')">检测浏览器是否支持textShadow</button>
       <p>如果需要检测某个具体的属性值是否支持，则需要把它赋值给相应的属性，然后再检查浏览器是否还保存这个值：</p>
-      <pre><code>
-        function testValue (value, property) {
+      <pre><code>function testValue (value, property) {
           var dummy = document.createElement('p')
           dummy.style[property] = value
 
