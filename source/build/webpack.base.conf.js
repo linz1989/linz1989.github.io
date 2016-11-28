@@ -59,14 +59,6 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        loader: 'style!css!autoprefixer'
-      },
-      {
-        test: /\.scss$/,
-        loader: 'style!css!sass?sourceMap'
-      },
-      {
         test: /\.json$/,
         loader: 'json'
       },
@@ -98,5 +90,9 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
+  },
+  externals: {
+    'AMap' : 'window.AMap',
+    'Strophe' : 'window.Strophe'
   }
 }

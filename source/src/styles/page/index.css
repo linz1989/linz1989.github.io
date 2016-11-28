@@ -516,7 +516,8 @@ header {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
   header > div.wrap, header > nav > ul {
-    width: 86%;
+    width: 96%;
+    max-width: 1280px;
     margin: 0 auto; }
   header > div.wrap {
     height: 100%;

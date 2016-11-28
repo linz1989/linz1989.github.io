@@ -7,7 +7,8 @@ header{
   background: url('../../assets/header-bg.jpg');
   transition: opacity 0.3s;
   >div.wrap,>nav>ul{
-    width:86%;
+    width:96%;
+    max-width: 1280px;
     margin:0 auto;
   }
   >div.wrap{
