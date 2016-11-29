@@ -127,6 +127,46 @@
     transform: scaleY(2.2) perspective(.5em) rotateX(5deg);
   }</code></pre>
       <p>注意在Y轴上需要放大一定的倍数。</p>
+      <h3 class="title">简单的饼图</h3>
+      <p>若要得到20%的比率显示，将元素显示成圆形，一半为绿色，一半为棕色；伪元素占据右半部分，并设置背景色为绿色，绕圆心旋转72deg，可以得到如下的效果。</p>
+      <div class="exp pie pie-1"><div></div></div>
+      <pre><code>width:220px;
+  height:220px;
+  border-radius: 50%;
+  background: yellowgreen;
+  background-image: linear-gradient(to right, transparent 50%, #655 50%);
+  &:before{
+    content : "";
+    display: block;
+    margin-left:50%;
+    height:100%;
+    background-color: inherit;
+    transform-origin: 0 50%;
+    border-radius: 0 100% 100% 0 / 50%;
+    transform: rotate(72deg);
+  }</code></pre>
+      <p>上述方案在显示0~50%比率时是正常的，要得到60%比率的饼图，需要将伪元素背景色设置为棕色，并只旋转36deg。</p>
+      <div class="exp pie pie-2"><div></div></div>
+      <pre><code>&:before{
+    background-color: #655;
+    transform: rotate(36deg);
+  }</code></pre>
+      <p>从0%到100%的进度指示器：伪元素在0~180deg范围之间旋转，每当旋转到180deg时，改变背景色，以实现50%~100%的比率显示效果。</p>
+      <div class="exp pie pie-3"><div></div></div>
+      <pre><code>@keyframes pie-spin {
+  to{
+    transform: rotate(180deg);
+  }
+}
+@keyframes pie-bg {
+  50%{
+    background-color: #655;
+  }
+}
+&:before{
+  background-color: inherit;
+  animation: pie-spin 3s linear infinite, pie-bg 6s step-end infinite;
+}</code></pre>
     </div>
     <footer>2016年11月08日</footer>
   </div>

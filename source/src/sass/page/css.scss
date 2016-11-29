@@ -2,7 +2,6 @@
 
 /////////////////////////////////////////////////////2
 div.exp{
-  height:160px;
   margin:15px auto;
   padding:20px 0;
   background: #eee;
@@ -271,6 +270,58 @@ div.tab-1>div{
     background: #58a;
     transform-origin: bottom;
     transform: scaleY(2.2) perspective(.5em) rotateX(5deg);
+  }
+}
+div.pie{
+  >div{
+    width:220px;
+    height:220px;
+    border-radius: 50%;
+    background: yellowgreen;
+    background-image: linear-gradient(to right, transparent 50%, #655 50%);
+    &:before{
+      content : "";
+      display: block;
+      margin-left:50%;
+      height:100%;
+      transform-origin: 0 50%;
+      border-radius: 0 100% 100% 0 / 50%;
+    }
+  }
+}
+div.pie-1{
+  >div{
+    &:before{
+      background-color: inherit;
+      transform: rotate(72deg);
+    }
+  }
+}
+div.pie-2{
+  >div{
+    &:before{
+      background-color: #655;
+      transform: rotate(36deg);
+    }
+  }
+}
+div.pie-3{
+  >div{
+    &:before{
+      background-color: inherit;
+      animation: pie-spin 3s linear infinite, pie-bg 6s step-end infinite;
+    }
+  }
+}
+
+@keyframes pie-spin {
+  to{
+    transform: rotate(180deg);
+  }
+}
+@keyframes pie-bg {
+  50%{
+    background-color: #655;
   }
 }
 //////////////////////////////////////////////////////
