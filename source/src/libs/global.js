@@ -1,0 +1,3 @@
+exports.Global = {
+  loading: false
+}

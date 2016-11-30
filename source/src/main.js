@@ -4,6 +4,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './app.vue'
+import { Global } from './libs/global'
 
 Vue.use(VueRouter)
 
@@ -43,7 +44,13 @@ console.dir(router)
 
 // 加载页面之前
 router.beforeEach(function (to, from, next) {
+  Global.loading = true
   next()
+})
+
+// 加载页面之后
+router.afterEach(function () {
+  Global.loading = false
 })
 
 new Vue({router, render: h => h(App)}).$mount('#app')
