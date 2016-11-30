@@ -279,6 +279,7 @@ div.pie{
     border-radius: 50%;
     background: yellowgreen;
     background-image: linear-gradient(to right, transparent 50%, #655 50%);
+    overflow: hidden;
     &:before{
       content : "";
       display: block;
@@ -334,6 +335,9 @@ div.pie-3{
   }
   div.paralle-1>div,div.paralle-2>div{
     width:200px;
+  }
+  div.pie>div{
+    height:280px;
   }
 }
 @media screen and (max-width: 359px){

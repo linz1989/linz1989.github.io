@@ -287,7 +287,8 @@ div.pie > div {
   border-radius: 50%;
   background: yellowgreen;
   background-image: -webkit-linear-gradient(left, transparent 50%, #655 50%);
-  background-image: linear-gradient(to right, transparent 50%, #655 50%); }
+  background-image: linear-gradient(to right, transparent 50%, #655 50%);
+  overflow: hidden; }
   div.pie > div:before {
     content: "";
     display: block;
@@ -335,7 +336,10 @@ div.pie-3 > div:before {
     border-radius: 140px / 60px; }
 
   div.paralle-1 > div, div.paralle-2 > div {
-    width: 200px; } }
+    width: 200px; }
+
+  div.pie > div {
+    height: 280px; } }
 @media screen and (max-width: 359px) {
   div.paralle-1 > div, div.paralle-2 > div {
     width: 180px; } }
