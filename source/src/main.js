@@ -13,7 +13,8 @@ var pageRouterList = [
   'about',
   'learning-css-secrects-1',
   'learning-css-secrects-2',
-  'learning-css-secrects-3'
+  'learning-css-secrects-3',
+  'learning-css-secrects-4'
 ]  // 页面列表
 var pageRouterOption = []         // 构造router
 

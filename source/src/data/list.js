@@ -24,9 +24,18 @@ export default {
       type: '读书笔记',
       category: 'css',
       title: '《CSS 揭秘》笔记之三：形状',
-      description: '此书第三章的内容。',
+      description: '此书第三章的内容。主要讲解了自适应椭圆、平行四边形、菱形图片、切角效果、梯形效果及饼图的实现方案。',
       date: '2016/11/08',
       routerName: 'learning-css-secrects-3'
+    },
+    {
+      id: '4',
+      type: '读书笔记',
+      category: 'css',
+      title: '《CSS 揭秘》笔记之四：视觉效果',
+      description: '此书第四章的内容。',
+      date: '2016/11/20',
+      routerName: 'learning-css-secrects-4'
     }
   ]
 }

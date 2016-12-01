@@ -306,7 +306,7 @@ div.pie-2{
     }
   }
 }
-div.pie-3{
+div.pie-3,div.pie-4{
   >div{
     &:before{
       background-color: inherit;
@@ -315,6 +315,15 @@ div.pie-3{
   }
 }
 
+div.pie-4{
+  >div{
+    &:before{
+      animation: pie-spin 50s linear infinite, pie-bg 100s step-end infinite;
+      animation-play-state: paused;
+      animation-delay:inherit;
+    }
+  }
+}
 @keyframes pie-spin {
   to{
     transform: rotate(180deg);
@@ -324,6 +333,19 @@ div.pie-3{
   50%{
     background-color: #655;
   }
+}
+
+div.shadow-1>div{
+  background: #58a;
+  box-shadow: 2px 3px 4px rgba(0,0,0,.5)
+}
+div.shadow-2>div{
+  background: #58a;
+  box-shadow: 0 8px 4px -4px rgba(0,0,0,.5);
+}
+div.shadow-3>div{
+  background: #58a;
+  box-shadow: 8px 0 4px -4px rgba(0,0,0,.5), -8px 0 4px -4px rgba(0,0,0,.5);
 }
 //////////////////////////////////////////////////////
 @media screen and (max-width: 402px){

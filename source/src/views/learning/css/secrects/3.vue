@@ -167,6 +167,18 @@
   background-color: inherit;
   animation: pie-spin 3s linear infinite, pie-bg 6s step-end infinite;
 }</code></pre>
+      <p>不足点是在比率为50%的时候，因背景色的突变，会闪动一下。</p>
+      <p><strong>负的动画时延（animation-delay）会直接跳至动画中的任意时间点，并定格在那里。</strong>如果动画持续时间为6秒，animation-delay设置为-1.2s可以使饼图显示出20%的比率。为计算简单考虑，可以设置动画持续时间为100s。</p>
+      <p>因为动画是设置在伪元素上的，为方便灵活显示不同的比率，可在主元素内联设置animation-delay，伪元素则<strong>inherit</strong>这个值。</p>
+      <div class="exp pie pie-4"><div style="animation-delay:-20s"></div></div>
+      <pre><code>&:before{
+  animation: pie-spin 50s linear infinite, pie-bg 100s step-end infinite;
+  animation-play-state: paused;
+  animation-delay:inherit;
+}</code></pre>
+      <p>元素简单设置即可：</p>
+      <pre><code>&lt;div style='animation-delay:-20s'&gt;&lt;/div&gt;</code></pre>
+      <p>使用SVG也可以实现饼图，但感觉有点麻烦。而且SVG的兼容性也不是很好。</p>
     </div>
     <footer>2016年11月08日</footer>
   </div>
