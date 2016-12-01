@@ -554,7 +554,8 @@ div.pie-3 > div:before {
     width: 200px; }
 
   div.pie > div {
-    height: 280px; } }
+    height: 220px;
+    width: 220px; } }
 @media screen and (max-width: 359px) {
   div.paralle-1 > div, div.paralle-2 > div {
     width: 180px; } }
