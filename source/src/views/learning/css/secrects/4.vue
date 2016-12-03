@@ -21,6 +21,46 @@
       <div class="exp shadow-3"><div></div></div>
       <pre><code>background: #58a;
   box-shadow: 8px 0 4px -4px rgba(0,0,0,.5), -8px 0 4px -4px rgba(0,0,0,.5);</code></pre>
+      <h3 class="title">不规则投影</h3>
+      <p>滤镜<strong>filter</strong>效果可以实现不规则的投影。它的写法是指定一些滤镜函数，以空格分隔，如：</p>
+      <pre><code>filter: blur() grayscale() drop-shadow()</code></pre>
+      <p>drop-shadow()滤镜参数和box-shadow基本类似，但不包括扩张半径，不包括inset关键字，也不支持多层投影。使用滤镜应用下面的切角矩形：</p>
+      <div class="exp cuttingAngle-3 filter-1"><div></div></div>
+      <pre><code>filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.5))</code></pre>
+      <h3 class="title">染色效果</h3>
+      <p><strong>基于滤镜的方案：</strong>sepia()滤镜会给图片增加一种降饱和度的橙黄色效果；saturate()滤镜可以提升每个像素的饱和度；hue-rotate()滤镜可以将每个像素的色相以指定的度数进行偏移。</p>
+      <div class="exp filter-2"><img src="../../../../assets/header.jpg"/></div>
+      <pre><code>filter: sepia(1) saturate(4) hue-rotate(295deg);
+  transition: 0.5s filter;
+  &:hover{
+    filter: none
+  }</code></pre>
+      <p>滤镜支持transition渐变。</p>
+      <p><strong>基于混合模式的方案：</strong>在Adobe Photo中混合模式定义了上层元素的颜色与下层元素的颜色进行混合的方式。使用luminosity模式可以实现染色效果。这种模式会保留上层元素的HSL亮度信息，并从它的下层吸取色相饱和度信息。</p>
+      <p>mix-blend-mode可以为整个元素设置混合模式。background-blend-mode可以为每层背景单独指定混合模式。</p>
+      <p>如果div中包含img，应用如下样式可以得到染色效果：</p>
+      <pre><code>div{
+    background: hsl(335, 100%, 50%);
+    &gt;img{
+      width:100%;
+      height:100%;
+      mix-blend-mode: luminosity;
+    }
+  }</code></pre>
+      <div class="exp filter-3"><div><img src="../../../../assets/header.jpg"/></div></div>
+      <p>另外一种方式，是将图片当做div的背景。</p>
+      <pre><code>width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-color: hsl(335, 100%, 50%);
+  background-blend-mode: luminosity;
+  transition: .5s background-color;
+  background-image: url("../../assets/header.jpg");
+  &:hover{
+    background-color: transparent;
+  }</code></pre>
+      <div class="exp filter-4"><div></div></div>
+      <h3 class="title">毛玻璃效果</h3>
     </div>
     <footer>2016年11月20日</footer>
   </div>
