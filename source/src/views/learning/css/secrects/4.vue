@@ -60,7 +60,14 @@
     background-color: transparent;
   }</code></pre>
       <div class="exp filter-4"><div></div></div>
-      <h3 class="title">毛玻璃效果</h3>
+      <h3 class="title">折角效果</h3>
+      <p><strong>使用渐变实现45度折角效果：</strong></p>
+      <p>需要使用两层渐变，一层渐变实现切角效果；另外一层实现右上角的折角，使用background-size限制尺寸为折角那区块，并且其值是切角渐变的1.414倍。</p>
+      <div class="exp angle-1"><div></div></div>
+      <pre><code>background: #58a;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,0.4) 0) no-repeat 100% 0 / 2em 2em,linear-gradient(-135deg, transparent 1.414em, #58a 0);</code></pre>
+      <p><strong>其他角度折角的解决方案：</strong></p>
+
     </div>
     <footer>2016年11月20日</footer>
   </div>
