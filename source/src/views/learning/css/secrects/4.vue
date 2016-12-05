@@ -66,8 +66,41 @@
       <div class="exp angle-1"><div></div></div>
       <pre><code>background: #58a;
   background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,0.4) 0) no-repeat 100% 0 / 2em 2em,linear-gradient(-135deg, transparent 1.414em, #58a 0);</code></pre>
-      <p><strong>其他角度折角的解决方案：</strong></p>
-
+      <p><strong>其他角度折角的解决方案：</strong>如下30度折角的方法。</p>
+      <div class="exp angle-2"><div></div></div>
+      <pre><code>background: #58a;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,0.4) 0) no-repeat 100% 0 / 3em 1.73em,linear-gradient(-150deg, transparent 1.5em, #58a 0);</code></pre>
+      <p>折角的长宽3em和1.73em是依据三角形的勾股定理得来的。</p>
+      <p>上面的折角其实是不真实的，真实的折角会旋转一定的角度。由于无法旋转背景，只好使用伪元素。</p>
+      <p>伪元素的写法：</p>
+      <pre><code>position: relative;
+  background: #58a;
+  background: linear-gradient(-150deg, transparent 1.5em,#58a 0);
+  &:before{
+    content: "";
+    position: absolute;
+    width:3em;
+    height:1.73em;
+    top:0;
+    right:0;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,0.4) 0);
+  }</code></pre>
+      <div class="exp angle-3"><div></div></div>
+      <p>要做到真实的效果，需要将折页三角形的宽和高对调，向上偏移一定的位置并旋转30度。</p>
+      <div class="exp angle-3 angle-4"><div></div></div>
+      <pre><code>&:before{
+  width:1.73em;
+  height:3em;
+  transform: translateY(-1.3em) rotate(-30deg);
+  transform-origin: bottom right;
+}</code></pre>
+      <p>更加好看的一种折角效果：（增加了阴影，圆角）</p>
+      <div class="exp angle-3 angle-4 angle-5"><div></div></div>
+      <pre><code>border-radius: .5em;
+&:before{
+  border-bottom-left-radius: inherit;
+  box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0,0,0,0.15);
+}</code></pre>
     </div>
     <footer>2016年11月20日</footer>
   </div>

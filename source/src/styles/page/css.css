@@ -394,6 +394,42 @@ div.angle-1 > div {
   background: -webkit-linear-gradient(right top, transparent 50%, rgba(0, 0, 0, 0.4) 0) no-repeat 100% 0/2em 2em, -webkit-linear-gradient(225deg, transparent 1.414em, #58a 0);
   background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0) no-repeat 100% 0/2em 2em, linear-gradient(-135deg, transparent 1.414em, #58a 0); }
 
+div.angle-2 > div {
+  height: 150px;
+  background: #58a;
+  background: -webkit-linear-gradient(right top, transparent 50%, rgba(0, 0, 0, 0.4) 0) no-repeat 100% 0/3em 1.73em, -webkit-linear-gradient(240deg, transparent 1.5em, #58a 0);
+  background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0) no-repeat 100% 0/3em 1.73em, linear-gradient(-150deg, transparent 1.5em, #58a 0); }
+
+div.angle-3 > div {
+  position: relative;
+  height: 150px;
+  background: #58a;
+  background: -webkit-linear-gradient(240deg, transparent 1.5em, #58a 0);
+  background: linear-gradient(-150deg, transparent 1.5em, #58a 0); }
+  div.angle-3 > div:before {
+    content: "";
+    position: absolute;
+    width: 3em;
+    height: 1.73em;
+    top: 0;
+    right: 0;
+    background: -webkit-linear-gradient(right top, transparent 50%, rgba(0, 0, 0, 0.4) 0);
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0); }
+
+div.angle-4 > div:before {
+  width: 1.73em;
+  height: 3em;
+  -webkit-transform: translateY(-1.3em) rotate(-30deg);
+          transform: translateY(-1.3em) rotate(-30deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right; }
+
+div.angle-5 > div {
+  border-radius: .5em; }
+  div.angle-5 > div:before {
+    border-bottom-left-radius: inherit;
+    box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.15); }
+
 @media screen and (max-width: 402px) {
   div.exp > div {
     width: 280px; }

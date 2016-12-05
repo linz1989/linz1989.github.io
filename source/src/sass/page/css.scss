@@ -397,6 +397,51 @@ div.angle-1{
       linear-gradient(-135deg, transparent 1.414em, #58a 0);
   }
 }
+div.angle-2{
+  >div{
+    height: 150px;
+    background: #58a;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,0.4) 0) no-repeat 100% 0 / 3em 1.73em,
+      linear-gradient(-150deg, transparent 1.5em, #58a 0);
+  }
+}
+div.angle-3{
+  >div{
+    position: relative;
+    height:150px;
+    background: #58a;
+    background: linear-gradient(-150deg, transparent 1.5em,#58a 0);
+    &:before{
+      content: "";
+      position: absolute;
+      width:3em;
+      height:1.73em;
+      top:0;
+      right:0;
+      background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,0.4) 0);
+    }
+  }
+}
+
+div.angle-4{
+  >div{
+    &:before{
+      width:1.73em;
+      height:3em;
+      transform: translateY(-1.3em) rotate(-30deg);
+      transform-origin: bottom right;
+    }
+  }
+}
+div.angle-5{
+  >div{
+    border-radius: .5em;
+    &:before{
+      border-bottom-left-radius: inherit;
+      box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0,0,0,0.15);
+    }
+  }
+}
 //////////////////////////////////////////////////////
 @media screen and (max-width: 402px){
   div.exp>div{

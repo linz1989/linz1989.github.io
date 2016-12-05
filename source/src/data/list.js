@@ -36,6 +36,15 @@ export default {
       description: '此书第四章的内容。',
       date: '2016/11/20',
       routerName: 'learning-css-secrects-4'
+    },
+    {
+      id: '5',
+      type: '读书笔记',
+      category: 'css',
+      title: '《CSS 揭秘》笔记之五：字体排印',
+      description: '此书第五章的内容。',
+      date: '2016/12/05',
+      routerName: 'learning-css-secrects-5'
     }
   ]
 }
