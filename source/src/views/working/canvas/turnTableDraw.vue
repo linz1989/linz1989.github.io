@@ -1,10 +1,10 @@
 <template>
   <div class="page">
-    <h2 class="title">《CSS 揭秘》笔记之五：字体排印</h2>
+    <h2 class="title">转盘抽奖的前端实现</h2>
     <div class="content">
-      <h3 class="title">连字符断行</h3>
-      <footer>2016年12月05日</footer>
-      </div>
+      <p></p>
+    </div>
+    <footer>2016年12月07日</footer>
   </div>
 </template>
 <script>
@@ -18,6 +18,9 @@
           }
         }
       })
+    },
+    methods: {
+
     }
   }
 </script>

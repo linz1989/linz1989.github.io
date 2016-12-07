@@ -9,13 +9,16 @@ import { Global } from './libs/global'
 Vue.use(VueRouter)
 
 var pageRouterList = [
+  'home',
   'css',
+  'canvas',
   'about',
   'learning-css-secrects-1',
   'learning-css-secrects-2',
   'learning-css-secrects-3',
   'learning-css-secrects-4',
-  'learning-css-secrects-5'
+  'learning-css-secrects-5',
+  'working-canvas-turnTableDraw'
 ]  // 页面列表
 var pageRouterOption = []         // 构造router
 
@@ -33,7 +36,7 @@ pageRouterList.forEach(function (pageName) {
 
 // 其他链接
 pageRouterOption.push({
-  path: '*', redirect: { name: 'css' }
+  path: '*', redirect: { name: 'home' }
 })
 
 // 路由配置

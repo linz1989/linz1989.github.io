@@ -45,6 +45,15 @@ export default {
       description: '此书第五章的内容。',
       date: '2016/12/05',
       routerName: 'learning-css-secrects-5'
+    },
+    {
+      id: '6',
+      type: '工作总结',
+      category: 'canvas',
+      title: '转盘抽奖的前端实现',
+      description: '介绍转盘抽奖页面实现过程中转盘的绘制、旋转度数的计算方案及前端使用随机数模拟的效果。',
+      date: '2016/12/07',
+      routerName: 'working-canvas-turnTableDraw'
     }
   ]
 }
