@@ -35,7 +35,8 @@ i, em {
 
 a {
   outline: none;
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 input, textarea {
   font-family: inherit;
@@ -684,7 +685,8 @@ header {
   height: 188px;
   background: url("../../assets/header-bg.jpg");
   -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s; }
+  transition: opacity 0.3s;
+  opacity: 0; }
   header > div.wrap, header > nav > ul {
     width: 96%;
     max-width: 1280px;
@@ -731,9 +733,13 @@ header {
         color: #ddd;
         -webkit-transition: color 0.25s, background 0.5s;
         transition: color 0.25s, background 0.5s; }
-        header > nav ul li a:hover {
+        header > nav ul li a:hover, header > nav ul li a.active {
           background-color: #036;
           color: #fff; }
+    header > nav.fixedTop {
+      position: fixed;
+      top: 0;
+      background: rgba(0, 51, 102, 0.8); }
 
 footer {
   text-align: center;
@@ -747,6 +753,45 @@ footer {
     footer > a:hover {
       color: #f60;
       text-decoration: underline; }
+
+nav.side-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  bottom: 0;
+  width: 260px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s ease-out;
+  transition: -webkit-transform 0.8s ease-out;
+  transition: transform 0.8s ease-out;
+  transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out; }
+  nav.side-menu.active {
+    -webkit-transform: translate3d(260px, 0, 0);
+            transform: translate3d(260px, 0, 0); }
+  nav.side-menu > ul {
+    padding-top: 42px; }
+    nav.side-menu > ul > li {
+      line-height: 45px;
+      color: #fff; }
+      nav.side-menu > ul > li > a {
+        display: block;
+        padding-left: 24px; }
+
+div.menu-icon {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 28px;
+  padding: 4px;
+  background: url("../../assets/menu.png") 4px 4px no-repeat; }
+  div.menu-icon.fixedTop {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px; }
 
 .fade-enter-active, .fade-leave-active {
   -webkit-transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -763,7 +808,10 @@ footer {
     header > nav {
       display: none; }
     header > div.wrap {
-      width: 98%; } }
+      width: 98%; }
+
+  div.menu-icon, nav.side-menu {
+    display: block; } }
 @media screen and (max-width: 402px) {
   header div.title {
     margin-left: 6px;

@@ -7,6 +7,7 @@ import App from './app.vue'
 import { Global } from './libs/global'
 
 Vue.use(VueRouter)
+window['_g'] = Global
 
 var pageRouterList = [
   'home',
@@ -52,7 +53,6 @@ router.beforeEach(function (to, from, next) {
   Global.loading = true
   next()
 })
-
 // 加载页面之后
 router.afterEach(function () {
   Global.loading = false

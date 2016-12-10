@@ -7,6 +7,7 @@ header{
   height: 188px;
   background: url('../../assets/header-bg.jpg');
   transition: opacity 0.3s;
+  opacity: 0;
   >div.wrap,>nav>ul{
     width:96%;
     max-width: 1280px;
@@ -57,12 +58,17 @@ header{
           padding:0 30px;
           color:#ddd;
           transition: color 0.25s, background 0.5s;
-          &:hover{
+          &:hover,&.active{
             background-color: #036;
             color:#fff;
           }
         }
       }
+    }
+    &.fixedTop{
+      position: fixed;
+      top:0;
+      background: rgba(0,51,102,0.8);
     }
   }
 }
@@ -82,6 +88,47 @@ footer{
   }
 }
 
+nav.side-menu{
+  display: none;
+  position: fixed;
+  top:0;
+  left:-260px;
+  bottom:0;
+  width:260px;
+  background: rgba(0,0,0,0.6);
+  transform: translate3d(0,0,0);
+  transition:transform 0.8s ease-out;
+  &.active{
+    transform: translate3d(260px,0,0);
+  }
+  >ul{
+    padding-top:42px;
+    >li{
+      line-height: 45px;
+      color:#fff;
+      >a{
+        display: block;
+        padding-left:24px;
+      }
+    }
+  }
+}
+
+div.menu-icon{
+  display: none;
+  position: fixed;
+  top:10px;
+  right:10px;
+  width:30px;
+  height:28px;
+  padding:4px;
+  background: url("../../assets/menu.png") 4px 4px no-repeat ;
+  &.fixedTop{
+    border:1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+}
+
 .fade-enter-active, .fade-leave-active{
   transition: opacity .3s ease-out, transform .3s ease-out
 }
@@ -98,6 +145,9 @@ footer{
     >div.wrap{
       width:98%;
     }
+  }
+  div.menu-icon,nav.side-menu{
+    display: block;
   }
 }
 
