@@ -14,8 +14,15 @@
   module.exports = {
     data: function () {
       return {
-        list: articleList.list.reverse()
+        list: []
       }
+    },
+    created: function () {
+      var list = articleList.list
+      list.sort(function (a, b) {
+        return a.date < b.date
+      })
+      this.list = list
     }
   }
 </script>
