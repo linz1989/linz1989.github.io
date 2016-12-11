@@ -24,7 +24,7 @@
       <router-view></router-view>
     </transition>
     <spinner v-show="global.loading"></spinner>
-    <div class="menu-icon" :class="{ fixedTop: isFixedTop }" @click="doClickMenuBtn($event)"></div>
+    <div class="side-menu-icon" :class="{ fixedTop: isFixedTop }" @click="doClickMenuBtn($event)"></div>
     <nav class="side-menu" :class="{active: showSizeMenu}" @click="doClickSideMenuWrap($event)">
       <ul>
         <li><router-link :to="{ name: 'home' }">Home</router-link></li>
@@ -32,6 +32,10 @@
         <li><router-link :to="{ name: 'canvas' }">Canvas</router-link></li>
         <li><router-link :to="{ name: 'about' }">About Me</router-link></li>
       </ul>
+    </nav>
+    <nav class="article-nav-menu" v-show="global.showArticleNavMenu">
+      <router-link class="back" title="前一篇" v-if="global.prevArticle" :to="{ name: global.prevArticle }"></router-link>
+      <router-link class="next" title="后一篇" v-if="global.nextArticle" :to="{ name: global.nextArticle }"></router-link>
     </nav>
   </div>
 </template>

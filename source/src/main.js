@@ -8,7 +8,7 @@ import { Global } from './libs/global'
 
 Vue.use(VueRouter)
 window['_g'] = Global
-
+var _global = Global
 var pageRouterList = [
   'home',
   'css',
@@ -46,16 +46,23 @@ var router = new VueRouter({
   routes: pageRouterOption
 })
 
-console.dir(router)
+// console.dir(router)
 
 // 加载页面之前
 router.beforeEach(function (to, from, next) {
-  Global.loading = true
+  _global.loading = true
   next()
 })
 // 加载页面之后
-router.afterEach(function () {
-  Global.loading = false
+router.afterEach(function (to) {
+  setTimeout(function () {
+    _global.loading = false
+  }, 500)
+  if (/^(home|css|canvas|about)$/.test(to.name)) {
+    _global.showArticleNavMenu = false
+    _global.nextArticle = ''
+    _global.prevArticle = ''
+  }
 })
 
 new Vue({router, render: h => h(App)}).$mount('#app')

@@ -160,6 +160,8 @@ that.needRotateDuration = 0.75 * (deltDeg / 180)</code></pre>
   </div>
 </template>
 <script>
+  import { Global } from '../../../libs/global'
+
   module.exports = {
     data: function () {
       return {
@@ -189,6 +191,7 @@ that.needRotateDuration = 0.75 * (deltDeg / 180)</code></pre>
         // 绘制转盘
         that.drawWheel()
       })
+      Global.setArticleNavMenu('working-canvas-turnTableDraw')
     },
     methods: {
       drawWheel: function () {
@@ -385,7 +388,7 @@ that.needRotateDuration = 0.75 * (deltDeg / 180)</code></pre>
       doClickLotteryBtn: function () {
         var that = this
         if (that.inRotating) {
-          return alert('抽奖中...')
+          return Global.tipShow('抽奖中...')
         }
 
         var prizes = that.prizes
@@ -401,7 +404,7 @@ that.needRotateDuration = 0.75 * (deltDeg / 180)</code></pre>
         var that = this
         if (that.inRotating) {
           that.inRotating = false
-          alert('您抽中了：' + that.winningPrize.name)
+          Global.tipShow('您抽中了：' + that.winningPrize.name)
         }
       }
     }
