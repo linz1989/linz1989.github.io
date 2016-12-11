@@ -22,7 +22,7 @@
       var dataList = articleList.list
       var tempList = []
       for (var k = dataList.length - 1; k >= 0; k--) {
-        if (dataList[k].category == 'canvas') {
+        if (dataList[k].type == '工作总结') {
           tempList.push(dataList[k])
         }
       }

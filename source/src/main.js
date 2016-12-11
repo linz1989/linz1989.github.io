@@ -11,8 +11,8 @@ window['_g'] = Global
 var _global = Global
 var pageRouterList = [
   'home',
-  'css',
-  'canvas',
+  'notes',
+  'summary',
   'about',
   'learning-css-secrects-1',
   'learning-css-secrects-2',
