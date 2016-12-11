@@ -882,7 +882,7 @@ div.side-menu-icon {
 .fade-enter, .fade-leave-active {
   opacity: 0; }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1390px) {
   .article-nav-menu {
     right: calc((100% - 1280px) / 2 - 50px ); } }
 @media screen and (max-width: 530px) {
