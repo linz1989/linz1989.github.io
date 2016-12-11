@@ -3,7 +3,7 @@
     <h2 class="title">《CSS 揭秘》笔记之五：字体排印</h2>
     <div class="content">
       <h3 class="title">连字符断行</h3>
-      <p></p>
+      <p>CSS中的</p>
       <footer>2016年12月05日</footer>
       </div>
   </div>
