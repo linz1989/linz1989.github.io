@@ -2,6 +2,15 @@ export default {
   author: 'zhangjialin',
   list: [
     {
+      id: '0',
+      type: '工作总结',
+      category: 'css',
+      title: '赣州统计信息网前端页面的重构',
+      description: '14年第一次接手网站项目，做的匆忙而粗糙。年初重构了整个网站，记录下重构的过程。',
+      date: '2016/05/15',
+      routerName: 'working-project-gztjjweb'
+    },
+    {
       id: '1',
       type: '读书笔记',
       category: 'css',

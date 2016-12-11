@@ -14,6 +14,7 @@ var pageRouterList = [
   'notes',
   'summary',
   'about',
+  'working-project-gztjjweb',
   'learning-css-secrects-1',
   'learning-css-secrects-2',
   'learning-css-secrects-3',

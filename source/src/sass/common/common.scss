@@ -124,6 +124,12 @@ div#app-tip{
         color:#f60;
         font-weight: normal;
       }
+      a{
+        color:#17579d;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
     }
     p.dot{
       color:#f60;
